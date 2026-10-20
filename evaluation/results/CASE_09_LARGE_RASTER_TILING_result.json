@@ -1,0 +1,24 @@
+{
+  "case_id": "CASE_09_LARGE_RASTER_TILING",
+  "job_id": "eval_CASE_09_LARGE_RASTER_TILING_9d162f",
+  "query": "Analyze the land cover distribution across this entire large mosaic.",
+  "inputs": [
+    "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_large_scene.tif"
+  ],
+  "elapsed_seconds": 0.29,
+  "status": "COMPLETED",
+  "tools_invoked": [
+    "raster-metadata",
+    "ben-scene-classifier"
+  ],
+  "models_used": [
+    "raster-metadata",
+    "ben-scene-classifier"
+  ],
+  "overall_confidence": "HIGH",
+  "executive_summary": "Astra AI analyzed the scene for query 'Analyze the land cover distribution across this entire large mosaic.'. Findings: raster_stats: {'filename': 'representative_large_scene.tif', 'width': 1200, 'height': 1200, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 2.0, 'gsd_y_m': 2.0, 'bounds': {'left': 300000.0, 'bottom': 2497600.0, 'right': 302400.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; classification: {'labels': ['Coastal wetlands', 'Water bodies', 'Arable land'], 'top_predictions': []}",
+  "narrative": "Investigation of query 'Analyze the land cover distribution across this entire large mosaic.' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_large_scene.tif', 'width': 1200, 'height': 1200, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 2.0, 'gsd_y_m': 2.0, 'bounds': {'left': 300000.0, 'bottom': 2497600.0, 'right': 302400.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; classification: {'labels': ['Coastal wetlands', 'Water bodies', 'Arable land'], 'top_predictions': []}",
+  "trace_step_count": 2,
+  "markdown_report": "evaluation\\results\\CASE_09_LARGE_RASTER_TILING_report.md",
+  "html_report": "evaluation\\results\\CASE_09_LARGE_RASTER_TILING_report.html"
+}

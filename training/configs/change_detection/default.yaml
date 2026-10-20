@@ -1,0 +1,15 @@
+model_name: "change_detection"
+architecture: "bit"
+dataset: "levir_cd"
+seed: 42
+batch_size: 8
+epochs: 200
+learning_rate: 1.0e-4
+mixed_precision: "no"
+
+# BIT specific settings
+bit_args:
+  net_G: "base_transformer_pos_s4_dd8"
+  n_class: 2
+  lr_policy: "linear"
+  max_epochs: 200

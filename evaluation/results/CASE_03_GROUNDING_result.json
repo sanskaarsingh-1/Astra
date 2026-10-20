@@ -1,0 +1,24 @@
+{
+  "case_id": "CASE_03_GROUNDING",
+  "job_id": "eval_CASE_03_GROUNDING_ae510e",
+  "query": "Where are the buildings located in this scene?",
+  "inputs": [
+    "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif"
+  ],
+  "elapsed_seconds": 0.13,
+  "status": "COMPLETED",
+  "tools_invoked": [
+    "raster-metadata",
+    "vrsbench-grounding"
+  ],
+  "models_used": [
+    "vrsbench-grounding",
+    "raster-metadata"
+  ],
+  "overall_confidence": "HIGH",
+  "executive_summary": "Astra AI analyzed the scene for query 'Where are the buildings located in this scene?'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; bbox: {'boxes': [{'label': 'where are the buildings located in this scene?', 'box_2d': [0.1562, 0.1562, 0.5059, 0.5059], 'pixel_coords': [80, 80, 259, 259], 'confidence': 0.88, 'provenance': 'VRSBench Visual Grounding Specialist'}], 'detections_count': 1, 'text_reference': None}",
+  "narrative": "Investigation of query 'Where are the buildings located in this scene?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; bbox: {'boxes': [{'label': 'where are the buildings located in this scene?', 'box_2d': [0.1562, 0.1562, 0.5059, 0.5059], 'pixel_coords': [80, 80, 259, 259], 'confidence': 0.88, 'provenance': 'VRSBench Visual Grounding Specialist'}], 'detections_count': 1, 'text_reference': None}",
+  "trace_step_count": 2,
+  "markdown_report": "evaluation\\results\\CASE_03_GROUNDING_report.md",
+  "html_report": "evaluation\\results\\CASE_03_GROUNDING_report.html"
+}

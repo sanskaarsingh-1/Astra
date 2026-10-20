@@ -1,0 +1,77 @@
+# ==============================================================================
+# Astra AI 2026 — Git Ignore Exclusions
+# ==============================================================================
+
+# --- Python Virtual Environments & Bytecode ---
+.venv/
+backend/.venv/
+training/.venv/
+*/.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- Environment Secrets (NEVER COMMIT) ---
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!backend/.env.example
+!.env.template
+!.env.sample
+
+# --- Private Keys & Credentials ---
+*.pem
+*.key
+*.pfx
+*.p12
+*service*account*.json
+*credentials*.json
+
+
+# --- Deep Learning Model Weights & Checkpoints ---
+# All trained weights must be downloaded separately or loaded via model registry
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.h5
+/trained/
+/models/*.pth
+/backend/models/*.pth
+/backend/models/baseline/*.pth
+/backend/models/bigearthnet_resnet50_v2_full/*.pth
+/backend/models/change_detection/checkpoints/*.pth
+/backend/checkpoints/
+/training/models/adapters/*
+/training/models/checkpoints/*
+!/training/models/adapters/.gitkeep
+!/training/models/checkpoints/.gitkeep
+
+
+
+
+
+
+
+
+
+
+
+
+
+node_modules/
+frontend/node_modules/
+.next/

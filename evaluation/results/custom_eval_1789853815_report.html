@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astra AI Investigation Report - eval_custom_eval_1789853815_b47e5c</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background: #0f172a;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      padding: 48px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .title-block h1 {
+      margin: 0 0 6px 0;
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .title-block .subtitle {
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .meta-block {
+      text-align: right;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-sih { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .badge-role { background: #f1f5f9; color: #475569; }
+    .conf-deterministic { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+    .conf-high { background: #f0fdf4; color: #15803d; }
+    .conf-med { background: #fefce8; color: #a16207; }
+    .conf-low { background: #fef2f2; color: #b91c1c; }
+    .status-success { background: #ecfdf5; color: #059669; }
+    .status-fail { background: #fef2f2; color: #dc2626; }
+
+    .query-callout {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 32px;
+    }
+    .query-callout .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #64748b;
+      letter-spacing: 0.5px;
+    }
+    .query-callout .text {
+      font-size: 17px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: 4px;
+    }
+
+    h2 {
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      page-break-after: avoid;
+    }
+    p {
+      margin: 0 0 14px 0;
+      font-size: 14px;
+      color: #334155;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 16px 0 28px 0;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid #e2e8f0;
+    }
+    td {
+      padding: 9px 12px;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+      vertical-align: top;
+    }
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+    .evidence-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      color: #475569;
+    }
+    .print-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    .btn-print {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-print:hover {
+      background: #0369a1;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+      h2 {
+        margin-top: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="print-bar no-print">
+      <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <div class="header">
+      <div class="title-block">
+        <span class="badge badge-sih">SIH26167 — ISRO SAC SPACE TECHNOLOGY</span>
+        <h1 style="margin-top: 8px;">Astra AI Investigation Report</h1>
+        <div class="subtitle">Autonomous Multimodal Geospatial Analysis &amp; Specialist Synthesis</div>
+      </div>
+      <div class="meta-block">
+        <div style="font-family: monospace; font-size: 12px; color: #64748b;">Job ID: eval_custom_eval_1789853815_b47e5c</div>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Generated: 2026-09-19 21:36:59 UTC</div>
+        <div style="margin-top: 8px;">
+          <span class="badge conf-high">CONFIDENCE: 0.794</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="query-callout">
+      <div class="label">User Mission Investigation Query</div>
+      <div class="text">&ldquo;What type of land cover dominates this scene?&rdquo;</div>
+    </div>
+
+    <h2>1. Executive Summary</h2>
+    <p>Astra AI analyzed the scene for query 'What type of land cover dominates this scene?'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}</p>
+
+    <h2>2. Investigation Narrative</h2>
+    <p>Investigation of query 'What type of land cover dominates this scene?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}</p>
+
+    <h2>3. Spatial Findings &amp; Geography</h2>
+    <p>Spatial metadata and coordinates successfully resolved from image headers.</p>
+
+    <h2>4. Temporal Analysis &amp; Change Findings</h2>
+    <p>Single image analyzed; temporal baseline established.</p>
+
+    <h2>5. SAR Microwave Evidence</h2>
+    <p>N/A - Optical analysis pipeline.</p>
+
+    <h2>6. Cross-Modal Synthesis</h2>
+    <p>N/A</p>
+
+    <h2>7. Verified Findings Provenance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Finding Type</th>
+          <th>Source Engine</th>
+          <th>Confidence</th>
+          <th>Extracted Evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><code>raster_stats</code></td>
+          <td><strong>raster-metadata</strong></td>
+          <td><span class="badge conf-deterministic">DETERMINISTIC</span></td>
+          <td class="evidence-val">{'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPS</td>
+        </tr>
+        
+
+        <tr>
+          <td><code>classification</code></td>
+          <td><strong>ben-scene-classifier</strong></td>
+          <td><span class="badge conf-med">58% (CALIBRATED_PROBABILITY)</span></td>
+          <td class="evidence-val">{'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>8. Identified Discrepancies &amp; Conflicts</h2>
+    <p>None identified.</p>
+
+    <h2>9. Investigation Methodology &amp; Active Models</h2>
+    <p>Executed pipeline utilizing: raster-metadata, ben-scene-classifier.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Model ID</th>
+          <th>Architecture</th>
+          <th>Model Role</th>
+          <th>Benchmark Dataset</th>
+          <th>Verified Metrics</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><code>ben-scene-classifier</code></td>
+          <td>ResNet-50</td>
+          <td><span class="badge badge-role">CURRENT_PRODUCTION_MODEL</span></td>
+          <td>BigEarthNet v2.0 (reBEN)</td>
+          <td><strong>Val Acc: 91.79%, Macro F1: 0.7038 (Calibrated T=3.1515, NLL 0.3263)</strong></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <p style="font-size: 12px; color: #64748b;">
+      <strong>Deterministic Tools Invoked:</strong> raster-metadata |
+      <strong>Total Latency:</strong> <code>3766ms</code>
+    </p>
+
+    <h2>10. Known Limitations</h2>
+    <ul>
+      <li>Fallback synthesis utilized due to external API state.</li>
+    </ul>
+
+    <h2>11. Assumptions &amp; Environmental Factors</h2>
+    <ul>
+      <li>Standard radiometric and geometric projection assumed.</li>
+    </ul>
+
+    <h2>12. Confidence Assessment</h2>
+    <p>Overall confidence score: 0.794</p>
+
+    <h2>13. Strategic Recommendations</h2>
+    <p>Review high-probability scene classifications and spectral metrics.</p>
+
+    <h2>Appendix: Auditable Execution Trace</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Step ID</th>
+          <th>Tool / Specialist</th>
+          <th>Status</th>
+          <th style="text-align: right;">Latency</th>
+          <th>Output Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <tr>
+              <td><code>step_1</code></td>
+              <td><code>raster-metadata</code></td>
+              <td><span class="badge status-success">SUCCESS</span></td>
+              <td style="text-align: right; font-family: monospace;">1ms</td>
+              <td class="evidence-val">Extracted metadata (3 bands)</td>
+            </tr>
+            
+
+            <tr>
+              <td><code>step_2</code></td>
+              <td><code>ben-scene-classifier</code></td>
+              <td><span class="badge status-success">SUCCESS</span></td>
+              <td style="text-align: right; font-family: monospace;">3765ms</td>
+              <td class="evidence-val">Classified as: Coniferous forest</td>
+            </tr>
+            
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

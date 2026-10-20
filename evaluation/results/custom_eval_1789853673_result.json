@@ -1,0 +1,25 @@
+{
+  "case_id": "custom_eval_1789853673",
+  "job_id": "eval_custom_eval_1789853673_40d5fb",
+  "query": "Compare optical and SAR observations for surface structures.",
+  "inputs": [
+    "evaluation\\test_data\\representative_cartosat_optical.tif",
+    "evaluation\\test_data\\representative_risat_sar.tif"
+  ],
+  "elapsed_seconds": 2.07,
+  "status": "COMPLETED",
+  "tools_invoked": [
+    "raster-metadata",
+    "raster-metadata",
+    "cross-modal-specialist"
+  ],
+  "models_used": [
+    "raster-metadata"
+  ],
+  "overall_confidence": "HIGH",
+  "executive_summary": "Astra AI analyzed the scene for query 'Compare optical and SAR observations for surface structures.'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; raster_stats: {'filename': 'representative_risat_sar.tif', 'width': 512, 'height': 512, 'band_count': 1, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'SAR'}",
+  "narrative": "Investigation of query 'Compare optical and SAR observations for surface structures.' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; raster_stats: {'filename': 'representative_risat_sar.tif', 'width': 512, 'height': 512, 'band_count': 1, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'SAR'}",
+  "trace_step_count": 3,
+  "markdown_report": "evaluation\\results\\custom_eval_1789853673_report.md",
+  "html_report": "evaluation\\results\\custom_eval_1789853673_report.html"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "vrsbench",
+  "description": "VRSBench: A Visual Remote Sensing Benchmark for VQA and Captioning.",
+  "task": "vqa_captioning",
+  "source_url": "https://huggingface.co/datasets/VRSBench/VRSBench",
+  "license": "CC-BY-NC-SA 4.0",
+  "approx_size_gb": 12.0,
+  "expected_structure": [
+    "images/",
+    "annotations/train.json",
+    "annotations/val.json",
+    "annotations/test.json"
+  ]
+}

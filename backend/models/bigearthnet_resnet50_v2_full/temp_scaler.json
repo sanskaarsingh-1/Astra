@@ -1,0 +1,10 @@
+{
+  "temperature": 3.15151,
+  "calibrated_at": "2026-09-19T21:07:09Z",
+  "n_samples": 256,
+  "pre_calibration_nll": 0.580738,
+  "post_calibration_nll": 0.326343,
+  "method": "temperature_scaling",
+  "model_checkpoint": "backend/models/bigearthnet_resnet50_v2_full/best_model.pth",
+  "notes": "Single scalar T; calibrated probability = sigmoid(logit / T). Applied in model_service.predict_scene()."
+}

@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "sih-orbilens-2026-tm",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "captioning_evaluated": 5,
+  "captioning_overlap": 0.1269,
+  "grounding_evaluated": 5,
+  "grounding_valid_boxes": 5,
+  "sample_captions": [
+    {
+      "image_id": "P0003_0002.png",
+      "expected": "The aerial image from GoogleEarth features a group of large yellow buses lined up on the left side, ...",
+      "generated": "an aerial view of the site where the building will be built as part of the project",
+      "overlap_score": 0.075
+    },
+    {
+      "image_id": "P0003_0004.png",
+      "expected": "The image from GoogleEarth captures a section of a road with three vehicles visible. One large vehic...",
+      "generated": "an aerial view of the site where the site of the proposed school is located in the site is adjacent to the site, along the school, along the school, along the school, along the school, along the school, along the road, along the school, along the school, along the road, is a",
+      "overlap_score": 0.143
+    },
+    {
+      "image_id": "P0007_0001.png",
+      "expected": "The high-resolution image from GoogleEarth shows a parking area with vehicles and asphalt surfaces. ...",
+      "generated": "an aerial view of a parking lot",
+      "overlap_score": 0.167
+    },
+    {
+      "image_id": "P0007_0004.png",
+      "expected": "The aerial image, sourced from GoogleEarth with high resolution, shows a parking lot with large vehi...",
+      "generated": "an aerial view of a parking lot",
+      "overlap_score": 0.139
+    },
+    {
+      "image_id": "P0007_0005.png",
+      "expected": "A high-resolution Google Earth image capturing a gray parking lot with large vehicles and a small ve...",
+      "generated": "an aerial view of a parking lot",
+      "overlap_score": 0.111
+    }
+  ],
+  "sample_grounding": [
+    {
+      "image_id": "P0003_0002.png",
+      "query": "The large yellow vehicle situated closest to the green area.",
+      "expected_box": [
+        0.2559,
+        0.4004,
+        0.334,
+        0.6035
+      ],
+      "predicted_box": [
+        0.0293,
+        0.0,
+        0.998,
+        0.998
+      ],
+      "iou": 0.016
+    },
+    {
+      "image_id": "P0003_0002.png",
+      "query": "The large vehicle located at the bottom-left corner of the image.",
+      "expected_box": [
+        0.1191,
+        0.9648,
+        0.2461,
+        1.0215
+      ],
+      "predicted_box": [
+        0.0293,
+        0.0,
+        0.998,
+        0.998
+      ],
+      "iou": 0.004
+    },
+    {
+      "image_id": "P0003_0002.png",
+      "query": "The small dark-colored vehicle located at the top-right corner of the image.",
+      "expected_box": [
+        0.8711,
+        0.2969,
+        0.9219,
+        0.3652
+      ],
+      "predicted_box": [
+        0.0293,
+        0.0,
+        0.998,
+        0.998
+      ],
+      "iou": 0.004
+    },
+    {
+      "image_id": "P0003_0002.png",
+      "query": "The small dark-colored vehicle positioned at the bottom-right corner of the image.",
+      "expected_box": [
+        0.8613,
+        0.8223,
+        0.9102,
+        0.9043
+      ],
+      "predicted_box": [
+        0.0293,
+        0.0,
+        0.998,
+        0.998
+      ],
+      "iou": 0.004
+    },
+    {
+      "image_id": "P0003_0004.png",
+      "query": "The large vehicle is situated towards the middle-left side of the image.",
+      "expected_box": [
+        0.0156,
+        0.4004,
+        0.0938,
+        0.6035
+      ],
+      "predicted_box": [
+        0.0352,
+        0.0,
+        0.998,
+        0.9941
+      ],
+      "iou": 0.017
+    }
+  ],
+  "timestamp": "2026-09-19T09:46:22Z"
+}

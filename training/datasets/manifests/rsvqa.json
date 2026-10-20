@@ -1,0 +1,13 @@
+{
+  "name": "rsvqa",
+  "description": "RSVQA: Visual Question Answering for Remote Sensing Data.",
+  "task": "vqa",
+  "source_url": "https://rsvqa.syr.edu/",
+  "license": "CC-BY-4.0",
+  "approx_size_gb": 8.0,
+  "expected_structure": [
+    "Images_LR/",
+    "Questions_LR/",
+    "Answers_LR/"
+  ]
+}

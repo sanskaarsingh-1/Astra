@@ -1,0 +1,14 @@
+{
+  "name": "sen12ms",
+  "description": "SEN12MS: A Curated Dataset of Georeferenced Multi-Spectral Sentinel-1/2 Imagery.",
+  "task": "multimodal_fusion",
+  "source_url": "https://github.com/schmitt-muc/SEN12MS",
+  "license": "ODC-BY",
+  "approx_size_gb": 120.0,
+  "expected_structure": [
+    "ROIs1158_spring/",
+    "ROIs1868_summer/",
+    "ROIs1970_fall/",
+    "ROIs2068_winter/"
+  ]
+}

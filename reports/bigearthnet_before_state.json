@@ -1,0 +1,98 @@
+{
+  "snapshot_timestamp": "2026-09-18T03:10:00Z",
+  "project_root": ".",
+  "baselines": {
+    "ben_classifier_pth": {
+      "path": "backend/models/ben_classifier.pth",
+      "exists": true,
+      "size_bytes": 94503657,
+      "sha256": "69b31203dfaa5f6fb9a58cb00e927dc65c4d8f940a95df8cfac67e3407a7dcea"
+    },
+    "ben_resnet50_training_dir": {
+      "exists": true,
+      "file_count": 7,
+      "total_size_bytes": 566068101,
+      "total_size_mb": 539.84,
+      "total_size_gb": 0.53
+    },
+    "processed_bigearthnet_dir": {
+      "exists": true,
+      "file_count": 6900,
+      "total_size_bytes": 280704905,
+      "total_size_mb": 267.7,
+      "total_size_gb": 0.26
+    },
+    "manifests_dir": {
+      "exists": true,
+      "file_count": 4,
+      "total_size_bytes": 978167,
+      "total_size_mb": 0.93,
+      "total_size_gb": 0.0
+    },
+    "processed_bigearthnet_resnet50_dir": {
+      "exists": true,
+      "file_count": 4612,
+      "total_size_bytes": 280921916,
+      "total_size_mb": 267.91,
+      "total_size_gb": 0.26
+    }
+  },
+  "raw_datasets": {
+    "01_BigEarthNet_v2": {
+      "exists": true,
+      "file_count": 3,
+      "total_size_bytes": 117694479897,
+      "total_size_mb": 112242.2,
+      "total_size_gb": 109.61
+    },
+    "02_BigEarthNet_txt": {
+      "exists": true,
+      "file_count": 36,
+      "total_size_bytes": 467240022,
+      "total_size_mb": 445.59,
+      "total_size_gb": 0.44
+    },
+    "03_VRSBench": {
+      "exists": true,
+      "file_count": 25,
+      "total_size_bytes": 4302916,
+      "total_size_mb": 4.1,
+      "total_size_gb": 0.0
+    },
+    "04_CDVQA": {
+      "exists": true,
+      "file_count": 5953,
+      "total_size_bytes": 2442167756,
+      "total_size_mb": 2329.03,
+      "total_size_gb": 2.27
+    },
+    "05_LEVIR_CD": {
+      "exists": true,
+      "file_count": 1913,
+      "total_size_bytes": 4440548231,
+      "total_size_mb": 4234.84,
+      "total_size_gb": 4.14
+    },
+    "06_RSVQA": {
+      "exists": true,
+      "file_count": 783,
+      "total_size_bytes": 207686367,
+      "total_size_mb": 198.07,
+      "total_size_gb": 0.19
+    },
+    "07_VRSBench": {
+      "exists": true,
+      "file_count": 88840,
+      "total_size_bytes": 13224731313,
+      "total_size_mb": 12612.09,
+      "total_size_gb": 12.32
+    },
+    "_acquisition": {
+      "exists": true,
+      "file_count": 7117,
+      "total_size_bytes": 23714357929,
+      "total_size_mb": 22615.77,
+      "total_size_gb": 22.09
+    }
+  }
+}

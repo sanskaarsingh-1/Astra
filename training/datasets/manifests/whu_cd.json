@@ -1,0 +1,11 @@
+{
+  "name": "whu_cd",
+  "description": "WHU Building Change Detection Dataset.",
+  "task": "change_detection",
+  "source_url": "http://gpcv.whu.edu.cn/data/building_dataset.html",
+  "license": "Custom/Research",
+  "approx_size_gb": 4.0,
+  "expected_structure": [
+    "A/", "B/", "label/"
+  ]
+}

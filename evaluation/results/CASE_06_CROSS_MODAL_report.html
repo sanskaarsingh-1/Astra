@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astra AI Investigation Report - eval_CASE_06_CROSS_MODAL_15ad54</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8fafc;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1 { color: #0f172a; border-bottom: 2px solid #3b82f6; padding-bottom: 8px; }
+    h2 { color: #1e3a8a; margin-top: 28px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="badge">SIH26167 — ISRO Space Tech</span>
+      <span style="color: #64748b; font-size: 12px;">Job ID: eval_CASE_06_CROSS_MODAL_15ad54</span>
+    </div>
+    <pre># Astra AI — Geospatial Investigation Report
+**Problem Statement**: SIH26167 (Space Technology — ISRO)  
+**Job ID**: `eval_CASE_06_CROSS_MODAL_15ad54`  
+**Generated At**: 2026-09-19 21:35:31 UTC  
+**Overall Confidence**: `0.803`  
+**User Query**: *&quot;Compare the optical and SAR observations for surface structures.&quot;*  
+
+---
+
+## 1. Executive Summary
+Astra AI analyzed the scene for query &#x27;Compare the optical and SAR observations for surface structures.&#x27;. Findings: raster_stats: {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;PANCHROMATIC&#x27;}; raster_stats: {&#x27;filename&#x27;: &#x27;representative_risat_sar.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 1, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;SAR&#x27;}; text: {&#x27;optical_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Optical (Multispectral / RGB)&#x27;, &#x27;sensor_family&#x27;: &#x27;Sentinel-2 / Cartosat-2S&#x27;, &#x27;physical_mechanism&#x27;: &#x27;Surface solar reflectance &amp; absorption&#x27;, &#x27;lulc_predictions&#x27;: [], &#x27;dominant_land_cover&#x27;: &#x27;Unclassified&#x27;, &#x27;vegetation_detected&#x27;: True, &#x27;water_detected&#x27;: False}, &#x27;sar_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Synthetic Aperture Radar (SAR)&#x27;, &#x27;sensor_family&#x27;: &#x27;Sentinel-1 / RISAT-1A (C-Band)&#x27;, &#x27;physical_mechanism&#x27;: &#x27;Microwave active backscatter &amp; dielectric geometry&#x27;, &#x27;penetration&#x27;: &#x27;All-weather, cloud &amp; smoke penetrating&#x27;, &#x27;backscatter_db&#x27;: {&#x27;mean_dB&#x27;: -21.82, &#x27;min_dB&#x27;: -30.0, &#x27;max_dB&#x27;: 0.0}, &#x27;specular_reflection_water&#x27;: True, &#x27;double_bounce_urban_structures&#x27;: True, &#x27;surface_roughness&#x27;: &#x27;High / Built&#x27;}, &#x27;modality_agreement&#x27;: &#x27;CONFLICT&#x27;, &#x27;conflicts&#x27;: [&#x27;Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.&#x27;], &#x27;complementary_findings&#x27;: [&#x27;SAR detects prominent double-bounce microwave corner reflections (-21.82 dB), confirming dense built-up infrastructure/metallic structures.&#x27;, &#x27;SAR structural detection penetrates surface canopy or shadow, revealing buildings obscured in optical bands.&#x27;], &#x27;synthesis&#x27;: &#x27;Modality conflict identified and resolved: Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.&#x27;, &#x27;confidence&#x27;: 0.65, &#x27;sensor_compatibility&#x27;: {&#x27;optical_source&#x27;: &#x27;Sentinel-2 MSI / ISRO Cartosat-2S&#x27;, &#x27;sar_source&#x27;: &#x27;Sentinel-1 C-SAR / ISRO RISAT-1A (EOS-04)&#x27;, &#x27;polarisation_supported&#x27;: [&#x27;VV&#x27;, &#x27;VH&#x27;, &#x27;HH&#x27;, &#x27;HV&#x27;, &#x27;RH&#x27;, &#x27;RV&#x27;]}, &#x27;model_name&#x27;: &#x27;optical-sar-cross-modal-specialist&#x27;, &#x27;provenance&#x27;: &#x27;BigEarthNet S1+S2 joint physics &amp; ISRO sensor alignment&#x27;}
+
+## 2. Investigation Narrative
+Investigation of query &#x27;Compare the optical and SAR observations for surface structures.&#x27; executed across active models and deterministic tools. raster_stats: {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;PANCHROMATIC&#x27;}; raster_stats: {&#x27;filename&#x27;: &#x27;representative_risat_sar.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 1, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;SAR&#x27;}; text: {&#x27;optical_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Optical (Multispectral / RGB)&#x27;, &#x27;sensor_family&#x27;: &#x27;Sentinel-2 / Cartosat-2S&#x27;, &#x27;physical_mechanism&#x27;: &#x27;Surface solar reflectance &amp; absorption&#x27;, &#x27;lulc_predictions&#x27;: [], &#x27;dominant_land_cover&#x27;: &#x27;Unclassified&#x27;, &#x27;vegetation_detected&#x27;: True, &#x27;water_detected&#x27;: False}, &#x27;sar_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Synthetic Aperture Radar (SAR)&#x27;, &#x27;sensor_family&#x27;: &#x27;Sentinel-1 / RISAT-1A (C-Band)&#x27;, &#x27;physical_mechanism&#x27;: &#x27;Microwave active backscatter &amp; dielectric geometry&#x27;, &#x27;penetration&#x27;: &#x27;All-weather, cloud &amp; smoke penetrating&#x27;, &#x27;backscatter_db&#x27;: {&#x27;mean_dB&#x27;: -21.82, &#x27;min_dB&#x27;: -30.0, &#x27;max_dB&#x27;: 0.0}, &#x27;specular_reflection_water&#x27;: True, &#x27;double_bounce_urban_structures&#x27;: True, &#x27;surface_roughness&#x27;: &#x27;High / Built&#x27;}, &#x27;modality_agreement&#x27;: &#x27;CONFLICT&#x27;, &#x27;conflicts&#x27;: [&#x27;Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.&#x27;], &#x27;complementary_findings&#x27;: [&#x27;SAR detects prominent double-bounce microwave corner reflections (-21.82 dB), confirming dense built-up infrastructure/metallic structures.&#x27;, &#x27;SAR structural detection penetrates surface canopy or shadow, revealing buildings obscured in optical bands.&#x27;], &#x27;synthesis&#x27;: &#x27;Modality conflict identified and resolved: Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.&#x27;, &#x27;confidence&#x27;: 0.65, &#x27;sensor_compatibility&#x27;: {&#x27;optical_source&#x27;: &#x27;Sentinel-2 MSI / ISRO Cartosat-2S&#x27;, &#x27;sar_source&#x27;: &#x27;Sentinel-1 C-SAR / ISRO RISAT-1A (EOS-04)&#x27;, &#x27;polarisation_supported&#x27;: [&#x27;VV&#x27;, &#x27;VH&#x27;, &#x27;HH&#x27;, &#x27;HV&#x27;, &#x27;RH&#x27;, &#x27;RV&#x27;]}, &#x27;model_name&#x27;: &#x27;optical-sar-cross-modal-specialist&#x27;, &#x27;provenance&#x27;: &#x27;BigEarthNet S1+S2 joint physics &amp; ISRO sensor alignment&#x27;}
+
+## 3. Spatial Findings &amp; Geography
+Spatial metadata and coordinates successfully resolved from image headers.
+
+## 4. Temporal Analysis &amp; Change Findings
+Single image analyzed; temporal baseline established.
+
+## 5. SAR Microwave Evidence
+N/A - Optical analysis pipeline.
+
+## 6. Optical &amp; SAR Cross-Modal Synthesis
+N/A
+
+## 7. Verified Findings Provenance
+| Finding Type | Source Engine | Confidence | Extracted Evidence |
+| :--- | :--- | :--- | :--- |
+| `raster_stats` | `raster-metadata` | DETERMINISTIC | {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs |
+| `raster_stats` | `raster-metadata` | DETERMINISTIC | {&#x27;filename&#x27;: &#x27;representative_risat_sar.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 1, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: |
+| `text` | `cross-modal-specialist` | 65% (CALIBRATED_PROBABILITY) | {&#x27;optical_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Optical (Multispectral / RGB)&#x27;, &#x27;sensor_family&#x27;: &#x27;Sentinel-2 / Cartosat-2S&#x27;, &#x27;physica |
+
+&gt; **Note on Calculation Certainty**: Measurements with `DETERMINISTIC` status (surface areas, distances, NDVI, SAR dB) reflect exact mathematical calculations from the input rasters or masks. Deterministic arithmetic certainty is distinct from upstream AI segmentation or classification confidence.
+
+## 8. Identified Discrepancies &amp; Conflicts
+- **[High]**: Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.
+
+## 9. Investigation Methodology
+Executed pipeline utilizing: raster-metadata, cross-modal-specialist.
+
+### Active Specialist Models Deployed
+| Model ID | Architecture | Model Role | Benchmark Dataset | Verified Metrics |
+| :--- | :--- | :--- | :--- | :--- |
+| `cross-modal-specialist` | Dual Physical Encoder (Optical Reflectance vs. Microwave Backscatter dB) | CURRENT_PRODUCTION_MODEL | BigEarthNet S1/S2 Paired (480k pairs) + Cartosat-2S &amp; RISAT-1A | Verified benchmark performance |
+
+- **Deterministic Tools Invoked**: raster-metadata
+- **Total Compute Time**: `83ms`
+
+## 10. Known Limitations
+- Fallback synthesis utilized due to external API state.
+
+## 11. Assumptions &amp; Environmental Factors
+- Standard radiometric and geometric projection assumed.
+
+## 12. Confidence Assessment
+Overall confidence score: 0.803
+
+## 13. Strategic Recommendations
+Review high-probability scene classifications and spectral metrics.
+
+---
+
+## Appendix: Auditable Execution Trace
+| Step | Tool / Specialist | Status | Latency | Output Summary |
+| :--- | :--- | :--- | :--- | :--- |
+| `step_1` | `raster-metadata` | **SUCCESS** | 1ms | Extracted metadata (3 bands) |
+| `step_2` | `raster-metadata` | **SUCCESS** | 0ms | Extracted metadata (1 bands) |
+| `step_3` | `cross-modal-specialist` | **SUCCESS** | 82ms | {&#x27;optical_evidence&#x27;: {&#x27;modality&#x27;: &#x27;Optical (Multispectral / RGB)&#x27;, &#x27;sensor_famil |
+</pre>
+  </div>
+</body>
+</html>

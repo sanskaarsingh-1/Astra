@@ -1,0 +1,124 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "Astra AI / SatQuery AI",
+  "sih_problem": "SIH26167",
+  "theme": "Space Technology — ISRO SAC",
+  "dataset_classification": "REPRESENTATIVE TEST DATA (Synthetic benchmarks approximating Cartosat-2S and RISAT-1A)",
+  "description": "Evaluation test cases for verifying autonomous agent reasoning, specialist model invocation, deterministic geospatial tools, and fail-safe robustness.",
+  "cases": [
+    {
+      "case_id": "CASE_01_LULC",
+      "inputs": [
+        "evaluation/test_data/representative_cartosat_optical.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "What type of land cover dominates this scene?",
+      "expected_capability": "Land use / land cover classification with calibrated probabilistic confidence",
+      "evaluation_notes": "Verifies agent routes to scene classification specialist and reports calibrated confidence with global temperature scaling T=3.1515."
+    },
+    {
+      "case_id": "CASE_02_VRS_CAPTION",
+      "inputs": [
+        "evaluation/test_data/representative_cartosat_optical.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "Describe what you see in this satellite image.",
+      "expected_capability": "Comprehensive remote-sensing scene description",
+      "evaluation_notes": "Verifies natural language scene captioning without requiring hardcoded keywords."
+    },
+    {
+      "case_id": "CASE_03_GROUNDING",
+      "inputs": [
+        "evaluation/test_data/representative_cartosat_optical.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "Where are the buildings located in this scene?",
+      "expected_capability": "Visual grounding and normalized bounding box regression",
+      "evaluation_notes": "Verifies dedicated grounding specialist produces spatial bounding coordinates [ymin, xmin, ymax, xmax]."
+    },
+    {
+      "case_id": "CASE_04_CHANGE_DETECTION",
+      "inputs": [
+        "evaluation/test_data/representative_bitemporal_t1.tif",
+        "evaluation/test_data/representative_bitemporal_t2.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "BI_TEMPORAL",
+      "query": "What changed between these two dates?",
+      "expected_capability": "Pixel-level bi-temporal surface change detection",
+      "evaluation_notes": "Verifies Siamese BIT change detection calculates change percentage and extracts change regions."
+    },
+    {
+      "case_id": "CASE_05_CHANGE_VQA",
+      "inputs": [
+        "evaluation/test_data/representative_bitemporal_t1.tif",
+        "evaluation/test_data/representative_bitemporal_t2.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "BI_TEMPORAL",
+      "query": "Did the built-up area increase between these two images?",
+      "expected_capability": "Bi-temporal change visual question answering",
+      "evaluation_notes": "Verifies bi-temporal reasoning with qualitative change direction assessment."
+    },
+    {
+      "case_id": "CASE_06_CROSS_MODAL",
+      "inputs": [
+        "evaluation/test_data/representative_cartosat_optical.tif",
+        "evaluation/test_data/representative_risat_sar.tif"
+      ],
+      "modality": "OPTICAL_AND_SAR",
+      "temporal_relationship": "CO_REGISTERED",
+      "query": "Compare the optical and SAR observations for surface structures.",
+      "expected_capability": "Cross-modal optical and microwave radar backscatter fusion",
+      "evaluation_notes": "Verifies multi-sensor synthesis combining visible spectral properties with radar backscatter reflections."
+    },
+    {
+      "case_id": "CASE_07_MULTI_TOOL_AREA",
+      "inputs": [
+        "evaluation/test_data/representative_cartosat_optical.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "What is the dominant land cover and approximately how much area does it occupy?",
+      "expected_capability": "Multi-tool reasoning: LULC classification + deterministic geospatial area metrology",
+      "evaluation_notes": "Verifies agent generates a multi-step plan invoking neural classifier followed by deterministic polygon/pixel area calculation."
+    },
+    {
+      "case_id": "CASE_08_MULTI_TOOL_CHANGE",
+      "inputs": [
+        "evaluation/test_data/representative_bitemporal_t1.tif",
+        "evaluation/test_data/representative_bitemporal_t2.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "BI_TEMPORAL",
+      "query": "What changed between these images and how much of the changed region appears to be built-up?",
+      "expected_capability": "Multi-specialist synthesis: Change detection + LULC verification + metrology",
+      "evaluation_notes": "Verifies multi-specialist orchestration combining bi-temporal difference mapping with spectral class identification."
+    },
+    {
+      "case_id": "CASE_09_LARGE_RASTER_TILING",
+      "inputs": [
+        "evaluation/test_data/representative_large_scene.tif"
+      ],
+      "modality": "OPTICAL",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "Analyze the land cover distribution across this entire large mosaic.",
+      "expected_capability": "Windowed raster tiling with constant memory and spatial hotspot aggregation",
+      "evaluation_notes": "Verifies 1200x1200px raster triggers O(1) memory windowed tiling without downsampling."
+    },
+    {
+      "case_id": "CASE_10_CORRUPTED_FAILSAFE",
+      "inputs": [
+        "evaluation/test_data/corrupted_sample.tif"
+      ],
+      "modality": "UNKNOWN",
+      "temporal_relationship": "SINGLE_DATE",
+      "query": "What features are visible in this scene?",
+      "expected_capability": "Graceful pre-flight validation failure without unhandled server exception",
+      "evaluation_notes": "Verifies system intercepts corrupted GeoTIFF headers gracefully and returns structured diagnostic error."
+    }
+  ]
+}

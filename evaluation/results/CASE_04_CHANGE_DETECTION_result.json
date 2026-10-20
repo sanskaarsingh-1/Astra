@@ -1,0 +1,29 @@
+{
+  "case_id": "CASE_04_CHANGE_DETECTION",
+  "job_id": "eval_CASE_04_CHANGE_DETECTION_ba6c49",
+  "query": "What changed between these two dates?",
+  "inputs": [
+    "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t1.tif",
+    "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t2.tif"
+  ],
+  "elapsed_seconds": 1.43,
+  "status": "COMPLETED",
+  "tools_invoked": [
+    "raster-metadata",
+    "bit-change-detection",
+    "change-area",
+    "cdvqa-specialist"
+  ],
+  "models_used": [
+    "raster-metadata",
+    "cdvqa-specialist",
+    "bit-change-detection",
+    "change-area"
+  ],
+  "overall_confidence": "HIGH",
+  "executive_summary": "Astra AI analyzed the scene for query 'What changed between these two dates?'. Findings: raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these two dates?', 'question_type': 'general', 'answer': 'No significant structural change was observed between the two dates.', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+  "narrative": "Investigation of query 'What changed between these two dates?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these two dates?', 'question_type': 'general', 'answer': 'No significant structural change was observed between the two dates.', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+  "trace_step_count": 4,
+  "markdown_report": "evaluation\\results\\CASE_04_CHANGE_DETECTION_report.md",
+  "html_report": "evaluation\\results\\CASE_04_CHANGE_DETECTION_report.html"
+}

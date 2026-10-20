@@ -1,0 +1,270 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Astra AI / SatQuery AI Model & Tool Registry",
+  "version": "2.0.0",
+  "last_updated": "2026-09-20T01:45:00Z",
+  "project": "SIH26167 (Space Technology - ISRO SAC)",
+  "models": {
+    "ben-scene-classifier": {
+      "model_id": "ben-scene-classifier",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "BigEarthNet Scene Classifier (ResNet-50 v2)",
+      "architecture": "ResNet-50",
+      "backbone": "ResNet-50 (torchvision.models.resnet50)",
+      "classifier_head": "nn.Linear(2048, 19)",
+      "num_classes": 19,
+      "dataset": "BigEarthNet v2.0 (reBEN)",
+      "dataset_total_samples": 480038,
+      "dataset_splits": {
+        "train": 237871,
+        "val": 122342,
+        "test": 119825
+      },
+      "source_tiles_coverage": "115 Sentinel-2 tiles (100% official coverage)",
+      "checkpoint_path": "backend/models/bigearthnet_resnet50_v2_full/best_model.pth",
+      "checkpoint_file_size_bytes": 283026840,
+      "training_epochs": 20,
+      "best_epoch": 19,
+      "metrics": {
+        "validation_accuracy": 91.79,
+        "validation_macro_f1": 0.7038,
+        "validation_micro_f1": 0.7604,
+        "validation_macro_precision": 0.6648,
+        "validation_macro_recall": 0.7560,
+        "validation_loss": 1.6211,
+        "test_accuracy": 91.67,
+        "test_macro_f1": 0.6515,
+        "test_micro_f1": 0.7555,
+        "test_macro_precision": 0.6230,
+        "test_macro_recall": 0.7007,
+        "test_loss": 1.2248,
+        "metric_notes": "91.79% is VALIDATION ACCURACY. It is NOT mAP. Macro F1 at best epoch is 70.38%."
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/lulc"
+    },
+    "bigearthnet_resnet50_baseline_historical": {
+      "model_id": "bigearthnet_resnet50_baseline_historical",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "HISTORICAL_BASELINE",
+      "name": "BigEarthNet ResNet-50 Baseline (Initial Pre-Run)",
+      "architecture": "ResNet-50",
+      "backbone": "ResNet-50 (torchvision.models.resnet50)",
+      "classifier_head": "nn.Linear(2048, 19)",
+      "num_classes": 19,
+      "dataset": "BigEarthNet v2 (subset baseline)",
+      "checkpoint_path": "backend/models/baseline/ben_classifier.pth",
+      "checkpoint_file_size_bytes": 94503657,
+      "sha256": "69b31203dfaa5f6fb9a58cb00e927dc65c4d8f940a95df8cfac67e3407a7dcea",
+      "metrics": {
+        "validation_accuracy": "not_available",
+        "validation_macro_f1": "not_available"
+      },
+      "status": "HISTORICAL_BASELINE_PRESERVED",
+      "note": "Preserved benchmark baseline prior to the full 480k patch 20-epoch training run. Weights untouched."
+    },
+    "bit-change-detection": {
+      "model_id": "bit-change-detection",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "Siamese BIT Change Detector",
+      "architecture": "Bitemporal Image Transformer (BIT) with Siamese ResNet-18 backbone",
+      "backbone": "ResNet-18 (Siamese dual-stream)",
+      "dataset": "LEVIR-CD",
+      "dataset_pairs": 1280,
+      "checkpoint_path": "backend/models/change_detection/checkpoints/best_model.pth",
+      "checkpoint_file_size_bytes": 77855813,
+      "training_epochs": 10,
+      "best_epoch": 10,
+      "metrics": {
+        "overall_accuracy": 96.98,
+        "f1_score": 69.56,
+        "iou": 53.33
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/change"
+    },
+    "rsvqa-specialist": {
+      "model_id": "rsvqa-specialist",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "RSVQA Visual Question Answering Specialist",
+      "architecture": "RSVQA Reasoning Specialist conditioned on LULC context",
+      "dataset": "RSVQA (LR & HR)",
+      "dataset_questions": 167667,
+      "checkpoint_path": "backend/models/rsvqa/model.py",
+      "metrics": {
+        "validation_accuracy": "Metric not currently verified",
+        "domain_coverage": "Presence, Count, Rural/Urban, Comparison"
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/vqa"
+    },
+    "vrsbench-caption": {
+      "model_id": "vrsbench-caption",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "VRSBench Scene Captioner",
+      "architecture": "VRSBench Fine-Grained Scene Description Specialist",
+      "dataset": "VRSBench Captioning",
+      "dataset_pairs": 9350,
+      "checkpoint_path": "backend/models/captioning/model.py",
+      "metrics": {
+        "validation_accuracy": "Metric not currently verified"
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/caption"
+    },
+    "vrsbench-grounding": {
+      "model_id": "vrsbench-grounding",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "Text-Guided Spatial Localization Specialist (VRSBench)",
+      "architecture": "Text-Guided Spatial Target Localization (Referring Expressions)",
+      "dataset": "VRSBench Referring Expressions",
+      "dataset_annotations": 16159,
+      "output_format": "Normalized bounding boxes [ymin, xmin, ymax, xmax]",
+      "checkpoint_path": "backend/models/captioning/model.py",
+      "metrics": {
+        "validation_accuracy": "Metric not currently verified"
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/grounding"
+    },
+    "cdvqa-specialist": {
+      "model_id": "cdvqa-specialist",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "CDVQA Change-VQA Specialist",
+      "architecture": "Change-grounded VQA fusing BIT change masks with ResNet-50 delta LULC shifts",
+      "dataset": "CDVQA",
+      "dataset_pairs": 2968,
+      "checkpoint_path": "backend/models/cdvqa/model.py",
+      "metrics": {
+        "validation_accuracy": "Metric evaluated on sample validation split (80.0%)"
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/change-vqa"
+    },
+    "cross-modal-specialist": {
+      "model_id": "cross-modal-specialist",
+      "specialist_kind": "LEARNED MODEL",
+      "model_role": "CURRENT_PRODUCTION_MODEL",
+      "name": "Optical + SAR Cross-Modal Reasoning Specialist",
+      "architecture": "Dual Physical Encoder (Optical Reflectance vs. Microwave Backscatter dB)",
+      "dataset": "BigEarthNet S1/S2 Paired (480k pairs) + Cartosat-2S & RISAT-1A",
+      "checkpoint_path": "backend/models/cross_modal/specialist.py",
+      "metrics": {
+        "physical_conflict_detection_accuracy": "Metric not currently verified"
+      },
+      "status": "OPERATIONAL_PRODUCTION",
+      "endpoint": "POST /api/specialists/optical-sar"
+    },
+    "rs-vlm-adapter": {
+      "model_id": "rs-vlm-adapter",
+      "specialist_kind": "LEARNED MODEL (PARTIAL ADAPTATION)",
+      "model_role": "PARTIAL_ADAPTATION",
+      "name": "Remote Sensing VLM (BLIP LoRA Adapter)",
+      "architecture": "Salesforce/blip-image-captioning-base + PEFT LoRA (r=16, alpha=32, target=[query,value])",
+      "base_model": "Salesforce/blip-image-captioning-base",
+      "adaptation": "LoRA (PEFT) on BigEarthNet.txt multimodal pairs",
+      "dataset": "BigEarthNet.txt (464,044 image-text pairs, Parquet)",
+      "adapter_checkpoint_path": "backend/models/remote_sensing_vlm/checkpoints/best_adapter/",
+      "adapter_file_size_bytes": 2374384,
+      "training_epochs_completed": 1,
+      "training_steps_completed": 1000,
+      "best_loss": 2.9409,
+      "training_elapsed_seconds": 296.23,
+      "metrics": {
+        "bench_exact_match_accuracy": 44.0,
+        "bench_substring_match_accuracy": 44.0,
+        "bench_samples_evaluated": 50,
+        "bench_binary_questions_em": 70.8,
+        "bench_mcq_em": 25.0,
+        "metric_notes": "44% EM on 50-sample BigEarthNet.txt bench split. Binary (yes/no) tasks: 70.8% EM. MCQ tasks: 25% EM. Requires more training epochs to improve MCQ and bounding-box tasks."
+      },
+      "status": "PARTIAL_ADAPTATION",
+      "inference_availability": "AVAILABLE_VIA_PEFT_LOAD",
+      "note": "Adapter is real-trained (not zero-shot). Wired via get_vlm_inference() in model.py. Requires more training on MCQ/grounding tasks. Next step: 3-5 additional epochs with --max_steps=5000.",
+      "next_training_command": "backend/models/remote_sensing_vlm/run_training_manual.ps1"
+    }
+  },
+  "deterministic_tools": {
+    "raster-metadata": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Raster Metadata Inspector",
+      "output": "CRS, EPSG, Affine Transform, Extent, GSD",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Rasterio spatial tags extraction"
+    },
+    "raster-stats": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Band Statistics Calculator",
+      "output": "Min, Max, Mean, Std, P2, P98 per band",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Exact numerical raster array statistics"
+    },
+    "sar-stats": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "SAR Backscatter Analyzer",
+      "output": "Calibrated dB backscatter, roughness, dynamic range",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Calibrated sigma0 microwave radar backscatter"
+    },
+    "ndvi-calculator": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "NDVI Calculator",
+      "output": "Normalized Difference (NIR-Red)/(NIR+Red)",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Direct spectral arithmetic"
+    },
+    "area-calculator": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Mask Surface Area Calculator",
+      "output": "Surface area in m², km², and hectares",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Exact geometry: pixel_count * GSD^2"
+    },
+    "bbox-area-calculator": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Bounding Box Area Tool",
+      "output": "Geodesic or pixel bounding box area",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Direct coordinate box area"
+    },
+    "polygon-area-calculator": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "WGS84 Geodesic Polygon Tool",
+      "output": "Spherical Earth surface area via Shapely & PyProj",
+      "calculation_status": "DETERMINISTIC",
+      "method": "WGS84 ellipsoid geodesic geometry"
+    },
+    "geodesic-distance-calculator": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Geodesic Distance Tool",
+      "output": "Great-circle distance in meters and kilometers",
+      "calculation_status": "DETERMINISTIC",
+      "method": "PyProj WGS84 geodesic distance"
+    },
+    "change-area": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Temporal Change Quantification",
+      "output": "Changed surface area in m² and hectares",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Exact pixel aggregation from difference mask"
+    },
+    "mask-overlay": {
+      "specialist_kind": "DETERMINISTIC TOOL",
+      "name": "Visual Mask Overlay Renderer",
+      "output": "Alpha-blended composite raster visualization",
+      "calculation_status": "DETERMINISTIC",
+      "method": "Deterministic pixel blending"
+    }
+  },
+  "provenance_notes": {
+    "resnet50_metric_clarification": "The ResNet-50 v2 metric 91.79% is VALIDATION ACCURACY from Epoch 19 of the 20-epoch BigEarthNet v2.0 training run. It is NOT mAP. The corresponding Validation Macro F1 is 70.38%. On the test set of 119,825 samples, Test Accuracy is 91.67% and Test Macro F1 is 65.15%.",
+    "resnet18_clarification": "ResNet-18 is actively used in this project as the Siamese dual-stream backbone of the BIT Change Detection Specialist (bit-change-detection), trained for 10 epochs on LEVIR-CD with 96.98% overall accuracy. There is no ResNet-18 checkpoint for LULC on disk; the production LULC classifier is ResNet-50.",
+    "deterministic_calculation_note": "DETERMINISTIC indicates that the numerical operation is deterministic given the supplied raster geometry, masks, and metadata. It does not by itself establish the accuracy of upstream model-derived masks or classifications."
+  }
+}

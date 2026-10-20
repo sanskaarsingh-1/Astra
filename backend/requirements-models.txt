@@ -1,0 +1,5 @@
+# Model-specific dependencies
+# Run: pip install -r requirements-models.txt
+
+# GeoChat dependency (installs from github)
+git+https://github.com/mbzuai-oryx/GeoChat.git@main#egg=geochat

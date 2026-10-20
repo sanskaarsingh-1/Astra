@@ -1,0 +1,13 @@
+model_name: "multimodal"
+architecture: "resnet50_fusion"
+dataset: "bigearthnet"
+seed: 42
+batch_size: 64
+epochs: 20
+learning_rate: 1.0e-4
+mixed_precision: "no"
+
+# Multimodal specific
+modalities: ["optical_rgb", "sar"]
+fusion_strategy: "early"
+n_classes: 19

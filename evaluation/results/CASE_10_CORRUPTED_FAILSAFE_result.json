@@ -1,0 +1,14 @@
+{
+  "case_id": "CASE_10_CORRUPTED_FAILSAFE",
+  "job_id": "eval_CASE_10_CORRUPTED_FAILSAFE_72f148",
+  "query": "What features are visible in this scene?",
+  "inputs": [
+    "D:\\tushar\\astra-ai\\evaluation\\test_data\\corrupted_sample.tif"
+  ],
+  "elapsed_seconds": 0.07,
+  "status": "ERROR",
+  "error": {
+    "message": "Unable to parse image data from corrupted_sample.tif",
+    "job_id": "eval_CASE_10_CORRUPTED_FAILSAFE_72f148"
+  }
+}

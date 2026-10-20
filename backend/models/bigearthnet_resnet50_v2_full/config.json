@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-09-18T16:26:40.783120",
+  "seed": 42,
+  "python_version": "3.11.16",
+  "pytorch_version": "2.11.0+cu128",
+  "torchvision_version": "0.26.0+cu128",
+  "cuda_runtime_version": "12.8",
+  "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "model_architecture": "resnet50",
+  "num_classes": 19,
+  "classifier_head": "nn.Linear(2048, 19)",
+  "loss_function": "BCEWithLogitsLoss",
+  "class_weighting": "weighted (BCEWithLogitsLoss with training pos_weights)",
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealingLR",
+  "epochs": 20,
+  "batch_size": 64,
+  "num_workers": 4,
+  "patience": 5,
+  "threshold": 0.5,
+  "resume": null,
+  "dataset_splits": {
+    "train": 237871,
+    "val": 122342,
+    "test": 119825
+  },
+  "classes": [
+    "Urban fabric",
+    "Industrial or commercial units",
+    "Arable land",
+    "Permanent crops",
+    "Pastures",
+    "Complex cultivation patterns",
+    "Land occupied by agriculture with natural vegetation",
+    "Agro-forestry areas",
+    "Broad-leaved forest",
+    "Coniferous forest",
+    "Mixed forest",
+    "Natural grassland and sparsely vegetated areas",
+    "Moors, heathland and sclerophyllous vegetation",
+    "Transitional woodland, shrub",
+    "Beaches, dunes, sands",
+    "Inland wetlands",
+    "Coastal wetlands",
+    "Inland waters",
+    "Marine waters"
+  ],
+  "class_frequencies_train": {
+    "Urban fabric": 33626,
+    "Industrial or commercial units": 6398,
+    "Arable land": 88236,
+    "Permanent crops": 15190,
+    "Pastures": 42968,
+    "Complex cultivation patterns": 51034,
+    "Land occupied by agriculture with natural vegetation": 60127,
+    "Agro-forestry areas": 15082,
+    "Broad-leaved forest": 64164,
+    "Coniferous forest": 76344,
+    "Mixed forest": 78791,
+    "Natural grassland and sparsely vegetated areas": 6984,
+    "Moors, heathland and sclerophyllous vegetation": 6329,
+    "Transitional woodland, shrub": 64198,
+    "Beaches, dunes, sands": 738,
+    "Inland wetlands": 11344,
+    "Coastal wetlands": 670,
+    "Inland waters": 30466,
+    "Marine waters": 35914
+  },
+  "preprocessing": {
+    "resolution": [
+      224,
+      224
+    ],
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "input_bands": [
+      "B04 (Red)",
+      "B03 (Green)",
+      "B02 (Blue)"
+    ],
+    "scaling": "Deterministic Level-2A physical reflectance scaling (DN / 10000.0) into [0.0, 1.0]"
+  }
+}

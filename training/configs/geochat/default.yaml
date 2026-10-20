@@ -1,0 +1,17 @@
+model_name: "geochat"
+base_model_id: "MBZUAI/geochat-7B"
+dataset: "vrsbench"
+seed: 42
+batch_size: 4
+epochs: 3
+learning_rate: 2.0e-5
+mixed_precision: "fp16"
+
+# LoRA / QLoRA specific settings
+peft:
+  use_lora: true
+  use_qlora: true
+  r: 16
+  lora_alpha: 32
+  target_modules: ["q_proj", "v_proj"]
+  lora_dropout: 0.05

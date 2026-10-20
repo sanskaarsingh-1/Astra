@@ -1,0 +1,189 @@
+{
+  "evaluation_timestamp": "2026-09-19T00:03:22.993131",
+  "checkpoint_path": "backend/models/bigearthnet_resnet50_v2_full/best_model.pth",
+  "checkpoint_epoch": 19,
+  "best_epoch": 19,
+  "val_macro_f1_at_selection": 0.7038,
+  "best_val_macro_f1": 0.7038,
+  "test_sample_count": 119825,
+  "test_loss": 1.2248,
+  "test_accuracy": 91.67,
+  "accuracy": 91.67,
+  "micro_precision": 0.7028,
+  "micro_recall": 0.8168,
+  "micro_f1": 0.7555,
+  "macro_precision": 0.623,
+  "macro_recall": 0.7007,
+  "macro_f1": 0.6515,
+  "threshold": 0.5,
+  "per_class": {
+    "Urban fabric": {
+      "precision": 0.6598,
+      "recall": 0.8026,
+      "f1": 0.7242,
+      "support": 12824
+    },
+    "Industrial or commercial units": {
+      "precision": 0.4037,
+      "recall": 0.5401,
+      "f1": 0.4621,
+      "support": 2018
+    },
+    "Arable land": {
+      "precision": 0.8392,
+      "recall": 0.8438,
+      "f1": 0.8415,
+      "support": 50052
+    },
+    "Permanent crops": {
+      "precision": 0.4994,
+      "recall": 0.5054,
+      "f1": 0.5024,
+      "support": 5710
+    },
+    "Pastures": {
+      "precision": 0.6922,
+      "recall": 0.7831,
+      "f1": 0.7349,
+      "support": 26722
+    },
+    "Complex cultivation patterns": {
+      "precision": 0.554,
+      "recall": 0.7847,
+      "f1": 0.6495,
+      "support": 22078
+    },
+    "Land occupied by agriculture with natural vegetation": {
+      "precision": 0.5888,
+      "recall": 0.7355,
+      "f1": 0.654,
+      "support": 29846
+    },
+    "Agro-forestry areas": {
+      "precision": 0.6296,
+      "recall": 0.881,
+      "f1": 0.7344,
+      "support": 9942
+    },
+    "Broad-leaved forest": {
+      "precision": 0.6926,
+      "recall": 0.8542,
+      "f1": 0.765,
+      "support": 36377
+    },
+    "Coniferous forest": {
+      "precision": 0.804,
+      "recall": 0.8804,
+      "f1": 0.8405,
+      "support": 39043
+    },
+    "Mixed forest": {
+      "precision": 0.7582,
+      "recall": 0.8657,
+      "f1": 0.8084,
+      "support": 44284
+    },
+    "Natural grassland and sparsely vegetated areas": {
+      "precision": 0.4085,
+      "recall": 0.4188,
+      "f1": 0.4136,
+      "support": 2211
+    },
+    "Moors, heathland and sclerophyllous vegetation": {
+      "precision": 0.5685,
+      "recall": 0.6246,
+      "f1": 0.5953,
+      "support": 3759
+    },
+    "Transitional woodland, shrub": {
+      "precision": 0.6352,
+      "recall": 0.7813,
+      "f1": 0.7007,
+      "support": 40523
+    },
+    "Beaches, dunes, sands": {
+      "precision": 0.549,
+      "recall": 0.1842,
+      "f1": 0.2759,
+      "support": 152
+    },
+    "Inland wetlands": {
+      "precision": 0.5139,
+      "recall": 0.6187,
+      "f1": 0.5614,
+      "support": 4519
+    },
+    "Coastal wetlands": {
+      "precision": 0.259,
+      "recall": 0.3675,
+      "f1": 0.3039,
+      "support": 117
+    },
+    "Inland waters": {
+      "precision": 0.8015,
+      "recall": 0.8524,
+      "f1": 0.8262,
+      "support": 16846
+    },
+    "Marine waters": {
+      "precision": 0.9798,
+      "recall": 0.9883,
+      "f1": 0.984,
+      "support": 11854
+    }
+  },
+  "class_mapping": {
+    "0": "Urban fabric",
+    "1": "Industrial or commercial units",
+    "2": "Arable land",
+    "3": "Permanent crops",
+    "4": "Pastures",
+    "5": "Complex cultivation patterns",
+    "6": "Land occupied by agriculture with natural vegetation",
+    "7": "Agro-forestry areas",
+    "8": "Broad-leaved forest",
+    "9": "Coniferous forest",
+    "10": "Mixed forest",
+    "11": "Natural grassland and sparsely vegetated areas",
+    "12": "Moors, heathland and sclerophyllous vegetation",
+    "13": "Transitional woodland, shrub",
+    "14": "Beaches, dunes, sands",
+    "15": "Inland wetlands",
+    "16": "Coastal wetlands",
+    "17": "Inland waters",
+    "18": "Marine waters"
+  },
+  "classes": [
+    "Urban fabric",
+    "Industrial or commercial units",
+    "Arable land",
+    "Permanent crops",
+    "Pastures",
+    "Complex cultivation patterns",
+    "Land occupied by agriculture with natural vegetation",
+    "Agro-forestry areas",
+    "Broad-leaved forest",
+    "Coniferous forest",
+    "Mixed forest",
+    "Natural grassland and sparsely vegetated areas",
+    "Moors, heathland and sclerophyllous vegetation",
+    "Transitional woodland, shrub",
+    "Beaches, dunes, sands",
+    "Inland wetlands",
+    "Coastal wetlands",
+    "Inland waters",
+    "Marine waters"
+  ],
+  "num_classes": 19,
+  "evaluation_duration_sec": 1481.41,
+  "evaluation_config": {
+    "checkpoint": "backend/models/bigearthnet_resnet50_v2_full/best_model.pth",
+    "batch_size": 64,
+    "num_workers": 0,
+    "pin_memory": false,
+    "threshold": 0.5,
+    "manifest": "datasets/processed/bigearthnet_resnet50_full/manifests/test.csv",
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "model_id": "resnet50-bigearthnet",
+  "architecture": "ResNet-50",
+  "task": "BigEarthNet scene classification",
+  "num_classes": 19,
+  "checkpoint_filename": "ben_classifier.pth",
+  "checkpoint_path": "backend/models/ben_classifier.pth",
+  "file_size_bytes": 94503657,
+  "file_size_mb": 90.13,
+  "sha256": "69b31203dfaa5f6fb9a58cb00e927dc65c4d8f940a95df8cfac67e3407a7dcea",
+  "device": "cuda:0",
+  "label_mapping": {
+    "0": "Urban fabric",
+    "1": "Industrial or commercial units",
+    "2": "Arable land",
+    "3": "Permanent crops",
+    "4": "Pastures",
+    "5": "Complex cultivation patterns",
+    "6": "Land occupied by agriculture with natural vegetation",
+    "7": "Agro-forestry areas",
+    "8": "Broad-leaved forest",
+    "9": "Coniferous forest",
+    "10": "Mixed forest",
+    "11": "Natural grassland",
+    "12": "Moors and heathland",
+    "13": "Sclerophyllous vegetation",
+    "14": "Transitional woodland shrub",
+    "15": "Beaches, dunes, and sands",
+    "16": "Inland wetlands",
+    "17": "Coastal wetlands",
+    "18": "Water bodies"
+  }
+}

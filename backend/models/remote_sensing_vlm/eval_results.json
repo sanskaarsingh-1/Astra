@@ -1,0 +1,190 @@
+{
+  "samples_evaluated": 50,
+  "exact_match_accuracy": 44.0,
+  "substring_match_accuracy": 44.0,
+  "per_task": {
+    "binary": {
+      "total": 24,
+      "exact": 17,
+      "substring": 17
+    },
+    "bounding box": {
+      "total": 4,
+      "exact": 0,
+      "substring": 0
+    },
+    "captioning": {
+      "total": 2,
+      "exact": 0,
+      "substring": 0
+    },
+    "mcq": {
+      "total": 20,
+      "exact": 5,
+      "substring": 5
+    }
+  },
+  "sample_predictions": [
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Are there touching boundaries between any instance of complex cultivation patterns and urban fabrics?",
+      "expected": "yes",
+      "predicted": "question : are there touching boundaries between any instance of complex cultivation patterns and urban fabrics? answer : no",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Does any instance of complex cultivation patterns abut industrial or commercial units in the scene?",
+      "expected": "yes",
+      "predicted": "question : does any instance of complex cultivation patterns abut industrial or commercial units in the scene? answer : no",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Does any instance of industrial or commercial units meet land principally occupied by agriculture with significant areas of natural vegetation at its edges in the image?",
+      "expected": "yes",
+      "predicted": "question : does any instance of industrial or commercial units meet land principally occupied by agriculture with significant areas of natural vegetation at its edges in the image? answer : no",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Does any broad-leaved forest make contact with industrial or commercial units in the image?",
+      "expected": "yes",
+      "predicted": "question : does any broad - leaved forest make contact with industrial or commercial units in the image? answer : no",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Is any instance of land principally occupied by agriculture with significant areas of natural vegetation situated directly next to urban fabrics?",
+      "expected": "yes",
+      "predicted": "question : is any instance of land principally occupied by agriculture with significant areas of natural vegetation situated directly next to urban fabrics? answer : yes",
+      "exact_match": true
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Is there evidence that any instance of pastures and urban fabrics are touching in the scene?",
+      "expected": "no",
+      "predicted": "question : is there evidence that any instance of pastures and urban fabrics are touching in the scene? answer : no",
+      "exact_match": true
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Does any arable land touch a broad-leaved forest in the image?",
+      "expected": "no",
+      "predicted": "question : does any arable land touch a broad - leaved forest in the image? answer : no",
+      "exact_match": true
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Would you identify any arable land as lying adjacent to complex cultivation patterns?",
+      "expected": "no",
+      "predicted": "question : would you identify any arable land as lying adjacent to complex cultivation patterns? answer : no",
+      "exact_match": true
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Does any instance of land principally occupied by agriculture with significant areas of natural vegetation lie right up against pastures?",
+      "expected": "no",
+      "predicted": "question : does any instance of land principally occupied by agriculture with significant areas of natural vegetation lie right up against pastures? answer : yes",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Do regions of any arable land directly adjoin industrial or commercial units?",
+      "expected": "no",
+      "predicted": "question : do regions of any arable land directly adjoin industrial or commercial units? answer : no",
+      "exact_match": true
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Is the total area of urban fabrics between 30% and 90%?",
+      "expected": "no",
+      "predicted": "question : is the total area of urban fabrics between 30 % and 90 %? answer : yes",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "binary",
+      "question": "Are urban fabrics distributed across at least four separate continuous parts of the image?",
+      "expected": "no",
+      "predicted": "question : are urban fabrics distributed across at least four separate continuous parts of the image? answer : yes",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "bounding box",
+      "question": "Output a bounding box surrounding the land cover class instance at <point>(0.29, 0.8)</point> in the satellite image.",
+      "expected": "[0.06 0.59, 0.51 1.0]",
+      "predicted": "question : output a bounding box surrounding the land cover class instance at < point > ( 0. 29, 0. 8 ) < / point > in the satellite image. answer : [ 0 0 0 0, 0 0 0 0 0 0 0 0 0 ]",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "bounding box",
+      "question": "Can you point out the <ref>smallest contiguous area of industrial or commercial units</ref> in this image?",
+      "expected": "[0.51 0.9, 0.9 1.0]",
+      "predicted": "question : can you point out the < ref > smallest contiguous area of industrial or commercial units < / ref > in this image? answer : [ 0 0 0, 0 0 0 0 0 0 0 0 ]",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "bounding box",
+      "question": "Point out the <ref>largest continuous area of industrial or commercial units</ref> in the scene.",
+      "expected": "[0.06 0.59, 0.51 1.0]",
+      "predicted": "question : point out the < ref > largest continuous area of industrial or commercial units < / ref > in the scene. answer : [ 0 0 0 0 0, 0 0 0 0 0 0 0 0 0 ]",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "bounding box",
+      "question": "Point out a continuous area of <ref>broad-leaved forest</ref> in the scene.",
+      "expected": "[0.0 0.44, 0.35 1.0]",
+      "predicted": "question : point out a continuous area of < ref > broad - leaved forest < / ref > in the scene. answer : [ 0 0 0 0 0, 0 0 0 0 0 0 0 0 ]",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "captioning",
+      "question": "Explain what this satellite image shows, mentioning the location, season, and landscape features.",
+      "expected": "This satellite image, captured during the summer in Austria, showcases a diverse landscape within the \"cold, no dry season, warm summer\" climate zone. The image is characterized by a mosaic of artificial surfaces, agricultural areas, and forest and seminatural areas. Urban fabric and industrial or commercial units, which together form artificial surfaces, cover approximately 497,000 square meters, with urban fabric (~351,000 sqm) appearing in two areas, one of which is marginal, and industrial or commercial units (~146,000 sqm) distributed across two areas, one of which is smaller (~113,000 sqm). The agricultural areas comprise arable land (~306,000 sqm), complex cultivation patterns (~341,000 sqm), land principally occupied by agriculture with significant areas of natural vegetation (~144,000 sqm). The urban fabric borders complex cultivation patterns, arable land, and land principally occupied by agriculture with significant areas of natural vegetation. The complex cultivation patterns are also next to industrial or commercial units, land principally occupied by agriculture with significant areas of natural vegetation, and broad-leaved forest (~114,000 sqm). Additionally, arable land is adjacent to land principally occupied by agriculture with significant areas of natural vegetation and pastures, which cover less than 5% (72,000 sqm) of the total area. Industrial or commercial units are adjacent to land principally occupied by agriculture with significant areas of natural vegetation and broad-leaved forest. The varied landscape reflects a mix of artificial surfaces, agricultural areas, and forest and seminatural areas, highlighting the region's ecological diversity.",
+      "predicted": "question : explain what this satellite image shows, mentioning the location, season, and landscape features. answer : this satellite image, captured during the spring season in finland, showcases a landscape within the expansive landscape within the expansive agricultural landscape within the expansive agricultural areas of the expansive",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "mcq",
+      "question": "Identify which pair is touching: a) Broad-leaved forest and Industrial or commercial units, b) Beaches, dunes, sands and Permanent crops, c) Mixed forest and Pastures, d) Broad-leaved forest and Land principally occupied by agriculture, with significant areas of natural vegetation",
+      "expected": "a",
+      "predicted": "question : identify which pair is touching : a ) broad - leaved forest and industrial or commercial units, b ) beaches, dunes, sands and permanent crops, c ) mixed forest and pastures, d ) broad - leaved forest and land principally occupied by agriculture, with significant areas of natural vegetation answer : b",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "mcq",
+      "question": "Which classes are in contact in this scene? a) Complex cultivation patterns and Inland waters, b) Coniferous forest and Industrial or commercial units, c) Complex cultivation patterns and Industrial or commercial units, d) Broad-leaved forest and Pastures",
+      "expected": "c",
+      "predicted": "question : which classes are in contact in this scene? a ) complex cultivation patterns and inland waters, b ) coniferous forest and industrial or commercial units, c ) complex cultivation patterns and industrial or commercial units, d ) broad - leaved forest and pastures answer : b",
+      "exact_match": false
+    },
+    {
+      "patch_id": "S2A_MSIL2A_20170613T101031_N9999_R022_T33UUP_32_64",
+      "task_type": "mcq",
+      "question": "From the options below, pick the touching pair: a) Complex cultivation patterns and Land principally occupied by agriculture, with significant areas of natural vegetation, b) Arable land and Beaches, dunes, sands, c) Industrial or commercial units and Urban fabric, d) Broad-leaved forest and Pastures",
+      "expected": "a",
+      "predicted": "question : from the options below, pick the touching pair : a ) complex cultivation patterns and land principally occupied by agriculture, with significant areas of natural vegetation, b ) arable land and beaches, dunes, sands, c ) industrial or commercial units and urban fabric, d ) broad - leaved forest and pastures answer : b",
+      "exact_match": false
+    }
+  ],
+  "timestamp": "2026-09-19T09:39:42Z"
+}

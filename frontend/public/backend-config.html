@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astra — Backend URL Configuration</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: rgba(255,255,255,0.08);
+      --cyan: #22d3ee;
+      --green: #34d399;
+      --red: #f87171;
+      --text: #e4e4e7;
+      --muted: #71717a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0 0 60px rgba(34,211,238,0.05);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #22d3ee22, #34d39922);
+      border: 1px solid var(--cyan);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: white; }
+    .subtitle { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+    .current-url {
+      background: rgba(34,211,238,0.05);
+      border: 1px solid rgba(34,211,238,0.2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    .current-url .label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .current-url .url { color: var(--cyan); word-break: break-all; }
+    label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; }
+    input[type="text"] {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: white;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      padding: 10px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus { border-color: var(--cyan); }
+    .actions { display: flex; gap: 10px; margin-top: 16px; }
+    button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Courier New', monospace;
+    }
+    .btn-primary { background: var(--cyan); color: #000; border-color: var(--cyan); }
+    .btn-primary:hover { background: #06b6d4; }
+    .btn-danger { background: transparent; color: var(--red); border-color: var(--red); }
+    .btn-danger:hover { background: rgba(248,113,113,0.1); }
+    .btn-test { background: transparent; color: var(--green); border-color: var(--green); }
+    .btn-test:hover { background: rgba(52,211,153,0.1); }
+    .status {
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      display: none;
+    }
+    .status.success { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: var(--green); display: block; }
+    .status.error { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3); color: var(--red); display: block; }
+    .status.info { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); color: var(--cyan); display: block; }
+    .instructions {
+      margin-top: 24px;
+      padding: 14px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .instructions strong { color: var(--text); }
+    code {
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 10px;
+      color: var(--cyan);
+    }
+    .goto-app {
+      display: block;
+      margin-top: 16px;
+      text-align: center;
+      padding: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+    .goto-app:hover { background: rgba(255,255,255,0.08); color: white; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">🛰</div>
+      <div>
+        <h1>Astra Backend Config</h1>
+        <div class="subtitle">SIH26167 — Runtime API URL Configuration</div>
+      </div>
+    </div>
+
+    <div class="current-url">
+      <div class="label">Current Backend URL</div>
+      <div class="url" id="current-url-display">Loading...</div>
+    </div>
+
+    <label for="url-input">New Backend URL (Cloudflare Tunnel)</label>
+    <input type="text" id="url-input" placeholder="https://xxxx.trycloudflare.com" />
+
+    <div class="actions">
+      <button class="btn-primary" onclick="setUrl()">✅ Set URL</button>
+      <button class="btn-test" onclick="testUrl()">🔗 Test</button>
+      <button class="btn-danger" onclick="clearUrl()">🗑 Reset</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div class="instructions">
+      <strong>How to use:</strong><br/>
+      1. Start the backend: <code>.\start.ps1</code> in <code>backend/</code><br/>
+      2. Get the Cloudflare tunnel URL from the terminal output<br/>
+      3. Paste it above and click <strong>Set URL</strong><br/>
+      4. Click <strong>Test</strong> to verify connectivity<br/>
+      5. Open the Astra app — it will now use your local backend
+      <br/><br/>
+      <strong>Note:</strong> This URL is stored in <code>localStorage</code> and persists across page reloads.
+      Reset to use the default <code>localhost:8000</code>.
+    </div>
+
+    <a href="/analyze" class="goto-app">→ Open SatQuery AI Analyze Page</a>
+  </div>
+
+  <script>
+    const KEY = 'ASTRA_API_URL';
+    const DEFAULT = 'http://localhost:8000';
+
+    function getCurrentUrl() {
+      return localStorage.getItem(KEY) || DEFAULT;
+    }
+
+    function updateDisplay() {
+      document.getElementById('current-url-display').textContent = getCurrentUrl();
+    }
+
+    function showStatus(msg, type) {
+      const el = document.getElementById('status');
+      el.textContent = msg;
+      el.className = 'status ' + type;
+    }
+
+    function setUrl() {
+      const val = document.getElementById('url-input').value.trim().replace(/\/$/, '');
+      if (!val || !val.startsWith('http')) {
+        showStatus('❌ Please enter a valid URL starting with https://', 'error');
+        return;
+      }
+      localStorage.setItem(KEY, val);
+      updateDisplay();
+      showStatus('✅ Backend URL updated. Reload the analyze page to apply.', 'success');
+    }
+
+    function clearUrl() {
+      localStorage.removeItem(KEY);
+      document.getElementById('url-input').value = '';
+      updateDisplay();
+      showStatus('🗑 URL cleared. Using default: ' + DEFAULT, 'info');
+    }
+
+    async function testUrl() {
+      const url = document.getElementById('url-input').value.trim().replace(/\/$/, '') || getCurrentUrl();
+      showStatus('🔗 Testing connection to ' + url + '/health ...', 'info');
+      try {
+        const res = await fetch(url + '/health', { signal: AbortSignal.timeout(8000) });
+        const data = await res.json();
+        if (data.status === 'online') {
+          showStatus('✅ Backend online! GPU: ' + (data.gpu?.name || 'unknown') +
+            ' | ResNet-50: ' + (data.models?.resnet50_bigearthnet || '?'), 'success');
+        } else {
+          showStatus('⚠ Connected but unexpected response: ' + JSON.stringify(data), 'error');
+        }
+      } catch (e) {
+        showStatus('❌ Connection failed: ' + e.message +
+          ' (Is backend running? Is tunnel active?)', 'error');
+      }
+    }
+
+    // Check for ?url= query parameter (e.g. from Google Colab 1-click launch)
+    const params = new URLSearchParams(window.location.search);
+    const queryUrl = params.get('url');
+    if (queryUrl && queryUrl.startsWith('http')) {
+      const cleanUrl = queryUrl.trim().replace(/\/$/, '');
+      localStorage.setItem(KEY, cleanUrl);
+      document.getElementById('url-input').value = cleanUrl;
+      updateDisplay();
+      showStatus('⚡ Auto-configured backend from URL parameter: ' + cleanUrl, 'success');
+      testUrl();
+    } else {
+      // Pre-fill input with current URL if it's a tunnel URL
+      const curr = getCurrentUrl();
+      if (curr !== DEFAULT) {
+        document.getElementById('url-input').value = curr;
+      }
+      updateDisplay();
+    }
+  </script>
+</body>
+</html>

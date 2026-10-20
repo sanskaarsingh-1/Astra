@@ -1,0 +1,28 @@
+{
+  "case_id": "custom_eval_1789853617",
+  "job_id": "eval_custom_eval_1789853617_ea7814",
+  "query": "What changed between these two dates?",
+  "inputs": [
+    "evaluation\\test_data\\representative_bitemporal_t1.tif",
+    "evaluation\\test_data\\representative_bitemporal_t2.tif"
+  ],
+  "elapsed_seconds": 6.38,
+  "status": "COMPLETED",
+  "tools_invoked": [
+    "raster-metadata",
+    "bit-change-detection",
+    "change-area",
+    "cdvqa-specialist"
+  ],
+  "models_used": [
+    "bit-change-detection",
+    "raster-metadata",
+    "change-area"
+  ],
+  "overall_confidence": "HIGH",
+  "executive_summary": "Astra AI analyzed the scene for query 'What changed between these two dates?'. Findings: raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}",
+  "narrative": "Investigation of query 'What changed between these two dates?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}",
+  "trace_step_count": 4,
+  "markdown_report": "evaluation\\results\\custom_eval_1789853617_report.md",
+  "html_report": "evaluation\\results\\custom_eval_1789853617_report.html"
+}

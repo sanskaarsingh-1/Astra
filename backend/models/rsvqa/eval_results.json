@@ -1,0 +1,30 @@
+{
+  "dataset": "RSVQA-LR",
+  "split": "test",
+  "sample_count": 10,
+  "overall_accuracy_pct": 10.0,
+  "per_type_accuracy": {
+    "rural_urban": {
+      "correct": 0,
+      "total": 1,
+      "accuracy_pct": 0.0
+    },
+    "presence": {
+      "correct": 1,
+      "total": 5,
+      "accuracy_pct": 20.0
+    },
+    "count": {
+      "correct": 0,
+      "total": 2,
+      "accuracy_pct": 0.0
+    },
+    "comp": {
+      "correct": 0,
+      "total": 2,
+      "accuracy_pct": 0.0
+    }
+  },
+  "avg_latency_ms": 415.48,
+  "timestamp": "2026-09-19T08:41:41Z"
+}

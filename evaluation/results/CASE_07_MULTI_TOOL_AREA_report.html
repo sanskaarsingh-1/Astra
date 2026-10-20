@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astra AI Investigation Report - eval_CASE_07_MULTI_TOOL_AREA_305d1b</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8fafc;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1 { color: #0f172a; border-bottom: 2px solid #3b82f6; padding-bottom: 8px; }
+    h2 { color: #1e3a8a; margin-top: 28px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="badge">SIH26167 — ISRO Space Tech</span>
+      <span style="color: #64748b; font-size: 12px;">Job ID: eval_CASE_07_MULTI_TOOL_AREA_305d1b</span>
+    </div>
+    <pre># Astra AI — Geospatial Investigation Report
+**Problem Statement**: SIH26167 (Space Technology — ISRO)  
+**Job ID**: `eval_CASE_07_MULTI_TOOL_AREA_305d1b`  
+**Generated At**: 2026-09-19 21:35:31 UTC  
+**Overall Confidence**: `0.794`  
+**User Query**: *&quot;What is the dominant land cover and approximately how much area does it occupy?&quot;*  
+
+---
+
+## 1. Executive Summary
+Astra AI analyzed the scene for query &#x27;What is the dominant land cover and approximately how much area does it occupy?&#x27;. Findings: raster_stats: {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;PANCHROMATIC&#x27;}; classification: {&#x27;labels&#x27;: [&#x27;Coniferous forest&#x27;], &#x27;top_predictions&#x27;: [{&#x27;label&#x27;: &#x27;Coniferous forest&#x27;, &#x27;probability&#x27;: 0.5877}, {&#x27;label&#x27;: &#x27;Arable land&#x27;, &#x27;probability&#x27;: 0.3818}, {&#x27;label&#x27;: &#x27;Broad-leaved forest&#x27;, &#x27;probability&#x27;: 0.0597}, {&#x27;label&#x27;: &#x27;Mixed forest&#x27;, &#x27;probability&#x27;: 0.0015}, {&#x27;label&#x27;: &#x27;Coastal wetlands&#x27;, &#x27;probability&#x27;: 0.0001}]}
+
+## 2. Investigation Narrative
+Investigation of query &#x27;What is the dominant land cover and approximately how much area does it occupy?&#x27; executed across active models and deterministic tools. raster_stats: {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs_epsg&#x27;: 32643, &#x27;crs_wkt&#x27;: &#x27;EPSG:32643&#x27;, &#x27;gsd_x_m&#x27;: 1.0, &#x27;gsd_y_m&#x27;: 1.0, &#x27;bounds&#x27;: {&#x27;left&#x27;: 300000.0, &#x27;bottom&#x27;: 2499488.0, &#x27;right&#x27;: 300512.0, &#x27;top&#x27;: 2500000.0}, &#x27;nodata&#x27;: None, &#x27;is_geospatial&#x27;: True, &#x27;modality&#x27;: &#x27;PANCHROMATIC&#x27;}; classification: {&#x27;labels&#x27;: [&#x27;Coniferous forest&#x27;], &#x27;top_predictions&#x27;: [{&#x27;label&#x27;: &#x27;Coniferous forest&#x27;, &#x27;probability&#x27;: 0.5877}, {&#x27;label&#x27;: &#x27;Arable land&#x27;, &#x27;probability&#x27;: 0.3818}, {&#x27;label&#x27;: &#x27;Broad-leaved forest&#x27;, &#x27;probability&#x27;: 0.0597}, {&#x27;label&#x27;: &#x27;Mixed forest&#x27;, &#x27;probability&#x27;: 0.0015}, {&#x27;label&#x27;: &#x27;Coastal wetlands&#x27;, &#x27;probability&#x27;: 0.0001}]}
+
+## 3. Spatial Findings &amp; Geography
+Spatial metadata and coordinates successfully resolved from image headers.
+
+## 4. Temporal Analysis &amp; Change Findings
+Single image analyzed; temporal baseline established.
+
+## 5. SAR Microwave Evidence
+N/A - Optical analysis pipeline.
+
+## 6. Optical &amp; SAR Cross-Modal Synthesis
+N/A
+
+## 7. Verified Findings Provenance
+| Finding Type | Source Engine | Confidence | Extracted Evidence |
+| :--- | :--- | :--- | :--- |
+| `raster_stats` | `raster-metadata` | DETERMINISTIC | {&#x27;filename&#x27;: &#x27;representative_cartosat_optical.tif&#x27;, &#x27;width&#x27;: 512, &#x27;height&#x27;: 512, &#x27;band_count&#x27;: 3, &#x27;dtype&#x27;: &#x27;uint8&#x27;, &#x27;crs |
+| `classification` | `ben-scene-classifier` | 58% (CALIBRATED_PROBABILITY) | {&#x27;labels&#x27;: [&#x27;Coniferous forest&#x27;], &#x27;top_predictions&#x27;: [{&#x27;label&#x27;: &#x27;Coniferous forest&#x27;, &#x27;probability&#x27;: 0.5877}, {&#x27;label&#x27;: &#x27; |
+
+&gt; **Note on Calculation Certainty**: Measurements with `DETERMINISTIC` status (surface areas, distances, NDVI, SAR dB) reflect exact mathematical calculations from the input rasters or masks. Deterministic arithmetic certainty is distinct from upstream AI segmentation or classification confidence.
+
+## 8. Identified Discrepancies &amp; Conflicts
+None identified.
+
+## 9. Investigation Methodology
+Executed pipeline utilizing: raster-metadata, ben-scene-classifier.
+
+### Active Specialist Models Deployed
+| Model ID | Architecture | Model Role | Benchmark Dataset | Verified Metrics |
+| :--- | :--- | :--- | :--- | :--- |
+| `ben-scene-classifier` | ResNet-50 | CURRENT_PRODUCTION_MODEL | BigEarthNet v2.0 (reBEN) | Val Acc: 91.79%, Macro F1: 0.7038 (Calibrated T=3.1515, NLL 0.3263) |
+
+- **Deterministic Tools Invoked**: raster-metadata
+- **Total Compute Time**: `22ms`
+
+## 10. Known Limitations
+- Fallback synthesis utilized due to external API state.
+
+## 11. Assumptions &amp; Environmental Factors
+- Standard radiometric and geometric projection assumed.
+
+## 12. Confidence Assessment
+Overall confidence score: 0.794
+
+## 13. Strategic Recommendations
+Review high-probability scene classifications and spectral metrics.
+
+---
+
+## Appendix: Auditable Execution Trace
+| Step | Tool / Specialist | Status | Latency | Output Summary |
+| :--- | :--- | :--- | :--- | :--- |
+| `step_1` | `raster-metadata` | **SUCCESS** | 0ms | Extracted metadata (3 bands) |
+| `step_2` | `ben-scene-classifier` | **SUCCESS** | 22ms | Classified as: Coniferous forest |
+</pre>
+  </div>
+</body>
+</html>

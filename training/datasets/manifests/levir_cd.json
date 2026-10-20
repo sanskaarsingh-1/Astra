@@ -1,0 +1,13 @@
+{
+  "name": "levir_cd",
+  "description": "LEVIR-CD: A large-scale building change detection dataset.",
+  "task": "change_detection",
+  "source_url": "https://justchenhao.github.io/LEVIR/",
+  "license": "Custom/Research",
+  "approx_size_gb": 2.5,
+  "expected_structure": [
+    "train/A/", "train/B/", "train/label/",
+    "val/A/", "val/B/", "val/label/",
+    "test/A/", "test/B/", "test/label/"
+  ]
+}

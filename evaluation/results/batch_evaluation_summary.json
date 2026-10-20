@@ -1,0 +1,254 @@
+{
+  "timestamp": "2026-09-19 21:35:32 UTC",
+  "total_cases": 10,
+  "passed_or_handled": 10,
+  "results": [
+    {
+      "case_id": "CASE_01_LULC",
+      "job_id": "eval_CASE_01_LULC_087ffa",
+      "query": "What type of land cover dominates this scene?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif"
+      ],
+      "elapsed_seconds": 3.92,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'What type of land cover dominates this scene?'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}",
+      "narrative": "Investigation of query 'What type of land cover dominates this scene?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}",
+      "trace_step_count": 2,
+      "markdown_report": "evaluation\\results\\CASE_01_LULC_report.md",
+      "html_report": "evaluation\\results\\CASE_01_LULC_report.html"
+    },
+    {
+      "case_id": "CASE_02_VRS_CAPTION",
+      "job_id": "eval_CASE_02_VRS_CAPTION_4e8776",
+      "query": "Describe what you see in this satellite image.",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif"
+      ],
+      "elapsed_seconds": 10.12,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "vrsbench-caption"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "vrsbench-caption"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'Describe what you see in this satellite image.'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; text: the satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite",
+      "narrative": "Investigation of query 'Describe what you see in this satellite image.' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; text: the satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite satellite",
+      "trace_step_count": 2,
+      "markdown_report": "evaluation\\results\\CASE_02_VRS_CAPTION_report.md",
+      "html_report": "evaluation\\results\\CASE_02_VRS_CAPTION_report.html"
+    },
+    {
+      "case_id": "CASE_03_GROUNDING",
+      "job_id": "eval_CASE_03_GROUNDING_ae510e",
+      "query": "Where are the buildings located in this scene?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif"
+      ],
+      "elapsed_seconds": 0.13,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "vrsbench-grounding"
+      ],
+      "models_used": [
+        "vrsbench-grounding",
+        "raster-metadata"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'Where are the buildings located in this scene?'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; bbox: {'boxes': [{'label': 'where are the buildings located in this scene?', 'box_2d': [0.1562, 0.1562, 0.5059, 0.5059], 'pixel_coords': [80, 80, 259, 259], 'confidence': 0.88, 'provenance': 'VRSBench Visual Grounding Specialist'}], 'detections_count': 1, 'text_reference': None}",
+      "narrative": "Investigation of query 'Where are the buildings located in this scene?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; bbox: {'boxes': [{'label': 'where are the buildings located in this scene?', 'box_2d': [0.1562, 0.1562, 0.5059, 0.5059], 'pixel_coords': [80, 80, 259, 259], 'confidence': 0.88, 'provenance': 'VRSBench Visual Grounding Specialist'}], 'detections_count': 1, 'text_reference': None}",
+      "trace_step_count": 2,
+      "markdown_report": "evaluation\\results\\CASE_03_GROUNDING_report.md",
+      "html_report": "evaluation\\results\\CASE_03_GROUNDING_report.html"
+    },
+    {
+      "case_id": "CASE_04_CHANGE_DETECTION",
+      "job_id": "eval_CASE_04_CHANGE_DETECTION_ba6c49",
+      "query": "What changed between these two dates?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t1.tif",
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t2.tif"
+      ],
+      "elapsed_seconds": 1.43,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "bit-change-detection",
+        "change-area",
+        "cdvqa-specialist"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "cdvqa-specialist",
+        "bit-change-detection",
+        "change-area"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'What changed between these two dates?'. Findings: raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these two dates?', 'question_type': 'general', 'answer': 'No significant structural change was observed between the two dates.', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "narrative": "Investigation of query 'What changed between these two dates?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these two dates?', 'question_type': 'general', 'answer': 'No significant structural change was observed between the two dates.', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "trace_step_count": 4,
+      "markdown_report": "evaluation\\results\\CASE_04_CHANGE_DETECTION_report.md",
+      "html_report": "evaluation\\results\\CASE_04_CHANGE_DETECTION_report.html"
+    },
+    {
+      "case_id": "CASE_05_CHANGE_VQA",
+      "job_id": "eval_CASE_05_CHANGE_VQA_38b2d2",
+      "query": "Did the built-up area increase between these two images?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t1.tif",
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t2.tif"
+      ],
+      "elapsed_seconds": 0.15,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "bit-change-detection",
+        "change-area",
+        "cdvqa-specialist"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "cdvqa-specialist",
+        "bit-change-detection",
+        "change-area"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'Did the built-up area increase between these two images?'. Findings: raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'Did the built-up area increase between these two images?', 'question_type': 'increase_or_not', 'answer': 'no', 'confidence': 0.95, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "narrative": "Investigation of query 'Did the built-up area increase between these two images?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'Did the built-up area increase between these two images?', 'question_type': 'increase_or_not', 'answer': 'no', 'confidence': 0.95, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "trace_step_count": 4,
+      "markdown_report": "evaluation\\results\\CASE_05_CHANGE_VQA_report.md",
+      "html_report": "evaluation\\results\\CASE_05_CHANGE_VQA_report.html"
+    },
+    {
+      "case_id": "CASE_06_CROSS_MODAL",
+      "job_id": "eval_CASE_06_CROSS_MODAL_15ad54",
+      "query": "Compare the optical and SAR observations for surface structures.",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif",
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_risat_sar.tif"
+      ],
+      "elapsed_seconds": 0.1,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "raster-metadata",
+        "cross-modal-specialist"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "cross-modal-specialist"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'Compare the optical and SAR observations for surface structures.'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; raster_stats: {'filename': 'representative_risat_sar.tif', 'width': 512, 'height': 512, 'band_count': 1, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'SAR'}; text: {'optical_evidence': {'modality': 'Optical (Multispectral / RGB)', 'sensor_family': 'Sentinel-2 / Cartosat-2S', 'physical_mechanism': 'Surface solar reflectance & absorption', 'lulc_predictions': [], 'dominant_land_cover': 'Unclassified', 'vegetation_detected': True, 'water_detected': False}, 'sar_evidence': {'modality': 'Synthetic Aperture Radar (SAR)', 'sensor_family': 'Sentinel-1 / RISAT-1A (C-Band)', 'physical_mechanism': 'Microwave active backscatter & dielectric geometry', 'penetration': 'All-weather, cloud & smoke penetrating', 'backscatter_db': {'mean_dB': -21.82, 'min_dB': -30.0, 'max_dB': 0.0}, 'specular_reflection_water': True, 'double_bounce_urban_structures': True, 'surface_roughness': 'High / Built'}, 'modality_agreement': 'CONFLICT', 'conflicts': ['Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.'], 'complementary_findings': ['SAR detects prominent double-bounce microwave corner reflections (-21.82 dB), confirming dense built-up infrastructure/metallic structures.', 'SAR structural detection penetrates surface canopy or shadow, revealing buildings obscured in optical bands.'], 'synthesis': 'Modality conflict identified and resolved: Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.', 'confidence': 0.65, 'sensor_compatibility': {'optical_source': 'Sentinel-2 MSI / ISRO Cartosat-2S', 'sar_source': 'Sentinel-1 C-SAR / ISRO RISAT-1A (EOS-04)', 'polarisation_supported': ['VV', 'VH', 'HH', 'HV', 'RH', 'RV']}, 'model_name': 'optical-sar-cross-modal-specialist', 'provenance': 'BigEarthNet S1+S2 joint physics & ISRO sensor alignment'}",
+      "narrative": "Investigation of query 'Compare the optical and SAR observations for surface structures.' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; raster_stats: {'filename': 'representative_risat_sar.tif', 'width': 512, 'height': 512, 'band_count': 1, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'SAR'}; text: {'optical_evidence': {'modality': 'Optical (Multispectral / RGB)', 'sensor_family': 'Sentinel-2 / Cartosat-2S', 'physical_mechanism': 'Surface solar reflectance & absorption', 'lulc_predictions': [], 'dominant_land_cover': 'Unclassified', 'vegetation_detected': True, 'water_detected': False}, 'sar_evidence': {'modality': 'Synthetic Aperture Radar (SAR)', 'sensor_family': 'Sentinel-1 / RISAT-1A (C-Band)', 'physical_mechanism': 'Microwave active backscatter & dielectric geometry', 'penetration': 'All-weather, cloud & smoke penetrating', 'backscatter_db': {'mean_dB': -21.82, 'min_dB': -30.0, 'max_dB': 0.0}, 'specular_reflection_water': True, 'double_bounce_urban_structures': True, 'surface_roughness': 'High / Built'}, 'modality_agreement': 'CONFLICT', 'conflicts': ['Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.'], 'complementary_findings': ['SAR detects prominent double-bounce microwave corner reflections (-21.82 dB), confirming dense built-up infrastructure/metallic structures.', 'SAR structural detection penetrates surface canopy or shadow, revealing buildings obscured in optical bands.'], 'synthesis': 'Modality conflict identified and resolved: Ambiguity detected: SAR exhibits low backscatter mimicking calm water, but Optical imagery shows dry smooth surface (e.g. tarmac/runway/dry flatland). Optical resolves false-positive SAR water.', 'confidence': 0.65, 'sensor_compatibility': {'optical_source': 'Sentinel-2 MSI / ISRO Cartosat-2S', 'sar_source': 'Sentinel-1 C-SAR / ISRO RISAT-1A (EOS-04)', 'polarisation_supported': ['VV', 'VH', 'HH', 'HV', 'RH', 'RV']}, 'model_name': 'optical-sar-cross-modal-specialist', 'provenance': 'BigEarthNet S1+S2 joint physics & ISRO sensor alignment'}",
+      "trace_step_count": 3,
+      "markdown_report": "evaluation\\results\\CASE_06_CROSS_MODAL_report.md",
+      "html_report": "evaluation\\results\\CASE_06_CROSS_MODAL_report.html"
+    },
+    {
+      "case_id": "CASE_07_MULTI_TOOL_AREA",
+      "job_id": "eval_CASE_07_MULTI_TOOL_AREA_305d1b",
+      "query": "What is the dominant land cover and approximately how much area does it occupy?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_cartosat_optical.tif"
+      ],
+      "elapsed_seconds": 0.03,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'What is the dominant land cover and approximately how much area does it occupy?'. Findings: raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}",
+      "narrative": "Investigation of query 'What is the dominant land cover and approximately how much area does it occupy?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_cartosat_optical.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'PANCHROMATIC'}; classification: {'labels': ['Coniferous forest'], 'top_predictions': [{'label': 'Coniferous forest', 'probability': 0.5877}, {'label': 'Arable land', 'probability': 0.3818}, {'label': 'Broad-leaved forest', 'probability': 0.0597}, {'label': 'Mixed forest', 'probability': 0.0015}, {'label': 'Coastal wetlands', 'probability': 0.0001}]}",
+      "trace_step_count": 2,
+      "markdown_report": "evaluation\\results\\CASE_07_MULTI_TOOL_AREA_report.md",
+      "html_report": "evaluation\\results\\CASE_07_MULTI_TOOL_AREA_report.html"
+    },
+    {
+      "case_id": "CASE_08_MULTI_TOOL_CHANGE",
+      "job_id": "eval_CASE_08_MULTI_TOOL_CHANGE_324b5d",
+      "query": "What changed between these images and how much of the changed region appears to be built-up?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t1.tif",
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_bitemporal_t2.tif"
+      ],
+      "elapsed_seconds": 0.15,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "bit-change-detection",
+        "change-area",
+        "cdvqa-specialist"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "cdvqa-specialist",
+        "bit-change-detection",
+        "change-area"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'What changed between these images and how much of the changed region appears to be built-up?'. Findings: raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these images and how much of the changed region appears to be built-up?', 'question_type': 'change_ratio', 'answer': '0%', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "narrative": "Investigation of query 'What changed between these images and how much of the changed region appears to be built-up?' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_bitemporal_t1.tif', 'width': 512, 'height': 512, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 1.0, 'gsd_y_m': 1.0, 'bounds': {'left': 300000.0, 'bottom': 2499488.0, 'right': 300512.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; text: {'change_percentage': 0.0, 'changed_pixels': 0, 'method': 'BIT'}; measurement: {'subtype': 'area', 'error': 'No mask available for area calculation.'}; text: {'question': 'What changed between these images and how much of the changed region appears to be built-up?', 'question_type': 'change_ratio', 'answer': '0%', 'confidence': 0.99, 'narrative': 'Bi-temporal raster difference is 0.0%, which is within normal seasonal or registration tolerance without distinct structural land-use change.', 'grounded_evidence': {'change_detected': False, 'change_percentage': 0.0, 'changed_pixels': 0, 'area_m2': 0.0, 'area_ha': 0.0, 'regions_count': 0, 'dominant_increase': 'built-up structures', 'dominant_decrease': 'natural terrain', 'class_deltas': {}}, 'change_mask_base64': 'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAAAAAB5Gfe6AAAAVklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQPcGAQ8AAb1ytegAAAAASUVORK5CYII=', 'model_name': 'cdvqa-specialist', 'provenance': 'CDVQA grounded multi-specialist reasoning (BIT + ResNet-50 v2)'}",
+      "trace_step_count": 4,
+      "markdown_report": "evaluation\\results\\CASE_08_MULTI_TOOL_CHANGE_report.md",
+      "html_report": "evaluation\\results\\CASE_08_MULTI_TOOL_CHANGE_report.html"
+    },
+    {
+      "case_id": "CASE_09_LARGE_RASTER_TILING",
+      "job_id": "eval_CASE_09_LARGE_RASTER_TILING_9d162f",
+      "query": "Analyze the land cover distribution across this entire large mosaic.",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\representative_large_scene.tif"
+      ],
+      "elapsed_seconds": 0.29,
+      "status": "COMPLETED",
+      "tools_invoked": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "models_used": [
+        "raster-metadata",
+        "ben-scene-classifier"
+      ],
+      "overall_confidence": "HIGH",
+      "executive_summary": "Astra AI analyzed the scene for query 'Analyze the land cover distribution across this entire large mosaic.'. Findings: raster_stats: {'filename': 'representative_large_scene.tif', 'width': 1200, 'height': 1200, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 2.0, 'gsd_y_m': 2.0, 'bounds': {'left': 300000.0, 'bottom': 2497600.0, 'right': 302400.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; classification: {'labels': ['Coastal wetlands', 'Water bodies', 'Arable land'], 'top_predictions': []}",
+      "narrative": "Investigation of query 'Analyze the land cover distribution across this entire large mosaic.' executed across active models and deterministic tools. raster_stats: {'filename': 'representative_large_scene.tif', 'width': 1200, 'height': 1200, 'band_count': 3, 'dtype': 'uint8', 'crs_epsg': 32643, 'crs_wkt': 'EPSG:32643', 'gsd_x_m': 2.0, 'gsd_y_m': 2.0, 'bounds': {'left': 300000.0, 'bottom': 2497600.0, 'right': 302400.0, 'top': 2500000.0}, 'nodata': None, 'is_geospatial': True, 'modality': 'OPTICAL_RGB'}; classification: {'labels': ['Coastal wetlands', 'Water bodies', 'Arable land'], 'top_predictions': []}",
+      "trace_step_count": 2,
+      "markdown_report": "evaluation\\results\\CASE_09_LARGE_RASTER_TILING_report.md",
+      "html_report": "evaluation\\results\\CASE_09_LARGE_RASTER_TILING_report.html"
+    },
+    {
+      "case_id": "CASE_10_CORRUPTED_FAILSAFE",
+      "job_id": "eval_CASE_10_CORRUPTED_FAILSAFE_72f148",
+      "query": "What features are visible in this scene?",
+      "inputs": [
+        "D:\\tushar\\astra-ai\\evaluation\\test_data\\corrupted_sample.tif"
+      ],
+      "elapsed_seconds": 0.07,
+      "status": "ERROR",
+      "error": {
+        "message": "Unable to parse image data from corrupted_sample.tif",
+        "job_id": "eval_CASE_10_CORRUPTED_FAILSAFE_72f148"
+      }
+    }
+  ]
+}

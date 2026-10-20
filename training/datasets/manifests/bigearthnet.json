@@ -1,0 +1,12 @@
+{
+  "name": "bigearthnet",
+  "description": "BigEarthNet v2: Large-scale Sentinel-2 dataset for scene classification.",
+  "task": "scene_classification",
+  "source_url": "https://bigearth.net/",
+  "license": "CDLA-Permissive-1.0",
+  "approx_size_gb": 66.0,
+  "expected_structure": [
+    "images/",
+    "labels/"
+  ]
+}
